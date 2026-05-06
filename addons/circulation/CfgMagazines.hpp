@@ -1,8 +1,10 @@
+// Modified by: Inferno
+
 #define SYRINGE_FORMAT_DISPLAY(med,size) QUOTE(format [ARR_4('%1 (%2ml) [%3]',C_LLSTRING(Syringe),size,C_LLSTRING(Medication_##med##))])
 #define SYRINGE_FORMAT_DESC(med,amount) QUOTE(format [ARR_3(C_LLSTRING(Syringe_PreparedWith),##amount##,C_LLSTRING(Medication_##med##))])
 
 #define PREPARE_SYRINGE(c,m,amount,med,name,desc) \
-    class DOUBLES(ACM_Syringe_##amount##,med): ACM_Syringe_10_Epinephrine { \
+    class ACM_Syringe_##amount##_##med: ACM_Syringe_10_Epinephrine { \
         picture = QPATHTOF(ui\syringe_##amount##_ca.paa); \
         displayName = name; \
         descriptionShort = desc; \

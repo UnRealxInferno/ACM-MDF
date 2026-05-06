@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Blue
+ * Author: Blue, Inferno
  * Wash eyes of patient with water.
  *
  * Arguments:
@@ -46,6 +46,9 @@ if (_medic != _patient) then {
 [_patient, "activity", LLSTRING(WashEyes_ActionLog), [[_medic, false, true] call ACEFUNC(common,getName)]] call ACEFUNC(medical_treatment,addToLog);
 
 _patient setVariable [QGVAR(EyesWashed), true, true];
+
+private _clearOphthalmologyEyeInjury = missionNamespace getVariable ["ACM_ophthalmology_fnc_clearEyeInjury", {}];
+[_patient] call _clearOphthalmologyEyeInjury;
 
 if ((_patient getVariable [QGVAR(Chemical_Chlorine_Blindness), false]) || (_patient getVariable [QGVAR(Chemical_Lewisite_Blindness), false])) exitWith {};
 

@@ -1,0 +1,26 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "x\\ACM\\addons\\gui"
+        },
+        {
+            "name": "hemtt",
+            "value": "1.18.1"
+        },
+        {
+            "name": "version",
+            "value": "1.4.7.0"
+        },
+        {
+            "name": "git",
+            "value": "7b425e37fcbf08d9363df14002dea69b319ab055"
+        }
+    ]
+}

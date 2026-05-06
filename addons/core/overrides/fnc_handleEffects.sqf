@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
+ * Author: BaerMitUmlaut, Inferno
  * Handles any visual effects of medical.
  * Note: Heart beat sounds run in a different PFH - see fnc_effectHeartBeat.
  *
@@ -17,6 +17,8 @@
  */
 params [["_manualUpdate", false]];
 
+private _fnc_updateOphthalmologyVisualEffects = missionNamespace getVariable ["ACM_ophthalmology_fnc_updateVisualEffects", {}];
+
 if (ACEGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false, 0] call ACEFUNC(medical_feedback,effectUnconscious);
     [false]    call ACEFUNC(medical_feedback,effectPain);
@@ -24,6 +26,7 @@ if (ACEGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false]    call ACEFUNC(medical_feedback,effectBloodVolumeIcon);
     [false]    call ACEFUNC(medical_feedback,effectBleeding);
     [false]    call FUNC(effectOxygen);
+    call _fnc_updateOphthalmologyVisualEffects;
 };
 
 BEGIN_COUNTER(handleEffects);
@@ -64,6 +67,7 @@ if ((!ACEGVAR(medical_feedback,heartBeatEffectRunning)) && {_heartRate != 0} && 
 [!_unconscious, _pain] call ACEFUNC(medical_feedback,effectPain);
 [!_unconscious, _bleedingStrength, _manualUpdate] call ACEFUNC(medical_feedback,effectBleeding);
 [!_unconscious, _oxygenSaturation, _respirationRate, _chestInjurySeverity, _criticalState, _isExposed] call FUNC(effectOxygen);
+call _fnc_updateOphthalmologyVisualEffects;
 
 // - Tourniquets, fractures and splints indication ---------------------------------------
 if (ACEGVAR(medical_feedback,enableHUDIndicators)) then {
