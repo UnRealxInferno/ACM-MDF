@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: mharis001
+ * Author: mharis001, Inferno
  * Updates injury list for given body part for the target.
  *
  * Arguments:
@@ -105,7 +105,7 @@ private _FBTKBags = 0;
             };
         };
         _totalBags = _totalBags + 1;  
-    } forEach _allBagsBodyPart; 
+    } forEach _IVBagsBodyPart; 
 } forEach ALL_BODY_PARTS;
 
 if (_totalBags > 0) then {
@@ -127,6 +127,8 @@ if (_totalBags > 0) then {
 } else {
     if (GVAR(showInactiveStatuses)) then {_entries pushBack [localize ACELSTRING(medical_treatment,Status_NoIv), _nonissueColor];};
 };
+
+// Hypothermia warmers are shown only on affected body parts, not in overview.
 
 // Indicate the amount of pain the unit is in
 if (_target call ACEFUNC(common,isAwake)) then {
@@ -356,6 +358,8 @@ if (_bodyPartIV isNotEqualTo [0,0,0]) then {
         };
     } forEach _bodyPartIV;
 };
+
+// Hypothermia warmer entries are injected by the hypothermia module event hooks.
 
 // AED
 private _allowOnArm = (_target getVariable [QEGVAR(circulation,AED_Placement_PulseOximeter), -1] == (_selectionN max 0)) || (_target getVariable [QEGVAR(circulation,AED_Placement_PressureCuff), -1] == (_selectionN max 0));

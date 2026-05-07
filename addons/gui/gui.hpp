@@ -10,7 +10,7 @@ class RscControlsGroupNoScrollbars;
 #define BODYIMAGE_IV(bodypart,site,sidc) \
     class TRIPLES(bodypart,IV,site): Torso_IO { \
         idc = sidc; \
-        text = QPATHTOF(data\body_image\##bodypart##_iv_##site##.paa); \
+        text = QPATHTOF(data\body_image\bodypart##_iv_##site.paa); \
     }
 
 class ACEGVAR(medical_gui,BodyImage): RscControlsGroupNoScrollbars {
@@ -115,21 +115,21 @@ class ACEGVAR(medical_gui,BodyImage): RscControlsGroupNoScrollbars {
             idc = IDC_BODY_LEFTLEG_IO;
             text = QPATHTOF(data\body_image\leftleg_io.paa);
         };
-        BODYIMAGE_IV(RightArm,Upper,IDC_BODY_RIGHTARM_UPPER_IV);
-        BODYIMAGE_IV(RightArm,Middle,IDC_BODY_RIGHTARM_MIDDLE_IV);
-        BODYIMAGE_IV(RightArm,Lower,IDC_BODY_RIGHTARM_LOWER_IV);
+        BODYIMAGE_IV(rightarm,upper,IDC_BODY_RIGHTARM_UPPER_IV);
+        BODYIMAGE_IV(rightarm,middle,IDC_BODY_RIGHTARM_MIDDLE_IV);
+        BODYIMAGE_IV(rightarm,lower,IDC_BODY_RIGHTARM_LOWER_IV);
 
-        BODYIMAGE_IV(LeftArm,Upper,IDC_BODY_LEFTARM_UPPER_IV);
-        BODYIMAGE_IV(LeftArm,Middle,IDC_BODY_LEFTARM_MIDDLE_IV);
-        BODYIMAGE_IV(LeftArm,Lower,IDC_BODY_LEFTARM_LOWER_IV);
+        BODYIMAGE_IV(leftarm,upper,IDC_BODY_LEFTARM_UPPER_IV);
+        BODYIMAGE_IV(leftarm,middle,IDC_BODY_LEFTARM_MIDDLE_IV);
+        BODYIMAGE_IV(leftarm,lower,IDC_BODY_LEFTARM_LOWER_IV);
 
-        BODYIMAGE_IV(RightLeg,Upper,IDC_BODY_RIGHTLEG_UPPER_IV);
-        BODYIMAGE_IV(RightLeg,Middle,IDC_BODY_RIGHTLEG_MIDDLE_IV);
-        BODYIMAGE_IV(RightLeg,Lower,IDC_BODY_RIGHTLEG_LOWER_IV);
+        BODYIMAGE_IV(rightleg,upper,IDC_BODY_RIGHTLEG_UPPER_IV);
+        BODYIMAGE_IV(rightleg,middle,IDC_BODY_RIGHTLEG_MIDDLE_IV);
+        BODYIMAGE_IV(rightleg,lower,IDC_BODY_RIGHTLEG_LOWER_IV);
 
-        BODYIMAGE_IV(LeftLeg,Upper,IDC_BODY_LEFTLEG_UPPER_IV);
-        BODYIMAGE_IV(LeftLeg,Middle,IDC_BODY_LEFTLEG_MIDDLE_IV);
-        BODYIMAGE_IV(LeftLeg,Lower,IDC_BODY_LEFTLEG_LOWER_IV);
+        BODYIMAGE_IV(leftleg,upper,IDC_BODY_LEFTLEG_UPPER_IV);
+        BODYIMAGE_IV(leftleg,middle,IDC_BODY_LEFTLEG_MIDDLE_IV);
+        BODYIMAGE_IV(leftleg,lower,IDC_BODY_LEFTLEG_LOWER_IV);
         class RightArm_PressureCuff: Torso_IO {
             idc = IDC_BODY_RIGHTARM_PRESSURECUFF;
             text = QPATHTOF(data\body_image\rightarm_aed_pressurecuff.paa);

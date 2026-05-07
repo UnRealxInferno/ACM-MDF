@@ -36,7 +36,7 @@
 #define BODY_BACKGROUND_IV(bodypart,site,sidc) \
     class BodyBackground_IV_##bodypart##_##site##: BodyBackground_IO_Torso { \
         idc = sidc; \
-        text = QPATHTOEF(gui,data\body_image\##bodypart##_iv_##site##.paa); \
+        text = QPATHTOEF(gui,data\body_image\bodypart##_iv_##site.paa); \
     }
 
 #define ACE_BODYPART(part) localize 'STR_ACE_Medical_GUI_##part##'

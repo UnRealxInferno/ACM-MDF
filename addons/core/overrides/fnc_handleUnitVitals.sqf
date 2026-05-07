@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, Inferno
  * Updates the vitals. Called from the statemachine's onState functions.
  *
  * Arguments:
@@ -38,9 +38,22 @@ if (_syncValues) then {
 
 private _bloodVolume = ([_unit, _deltaT, _syncValues] call ACEFUNC(medical_status,getBloodVolumeChange));
 _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
+private _unitTemperature = 37;
 
 // @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
 _unit setVariable [VAR_BLOOD_VOL, _bloodVolume, _syncValues];
+
+if (missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false]) then {
+    private _handleHypothermiaTemperature = missionNamespace getVariable ["ACM_hypothermia_fnc_handleTemperature", {}];
+    private _altitude = (getPosASL _unit) select 2;
+    private _altitudeTempImpact = switch (true) do {
+        case (_altitude >= 10): { abs (_altitude / 153) * -1 };
+        case (_altitude <= -1): { -35 max ((abs (_altitude / 50) * -1) - 17) };
+        default { 0 };
+    };
+
+    _unitTemperature = [_unit, _altitudeTempImpact, _bloodVolume, _deltaT, _syncValues] call _handleHypothermiaTemperature;
+};
 
 // Set variables for synchronizing information across the net
 private _hemorrhage = switch (true) do {
@@ -178,6 +191,17 @@ if (_reactionSeverity > 0) then {
     _respirationRateAdjustment = _respirationRateAdjustment - _reactionSeverity * 5;
     _peripheralResistanceAdjustment = _peripheralResistanceAdjustment - _reactionSeverity * 15;
     _breathingEffectivenessAdjustment = _breathingEffectivenessAdjustment - (_reactionSeverity * 0.05);
+};
+
+if (missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false]) then {
+    if (_unitTemperature < 36) then {
+        // Hypothermia reduces oxygenation and trends toward bradycardia as temperature drops.
+        _breathingEffectivenessAdjustment = _breathingEffectivenessAdjustment - (linearConversion [36, 28, _unitTemperature, 0.03, 0.22, true]);
+        _coSensitivityAdjustment = _coSensitivityAdjustment - (linearConversion [36, 28, _unitTemperature, 0.02, 0.12, true]);
+        _hrTargetAdjustment = _hrTargetAdjustment - (linearConversion [35, 27, _unitTemperature, 0, 28, true]);
+        _respirationRateAdjustment = _respirationRateAdjustment - (linearConversion [35, 28, _unitTemperature, 0, 4, true]);
+        _peripheralResistanceAdjustment = _peripheralResistanceAdjustment + (linearConversion [36, 30, _unitTemperature, 0, 16, true]);
+    };
 };
 
 // Update SPO2 intake and usage since last update

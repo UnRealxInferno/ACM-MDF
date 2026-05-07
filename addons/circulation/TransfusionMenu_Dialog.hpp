@@ -88,21 +88,57 @@ class GVAR(TransfusionMenu_Dialog) {
             idc = IDC_TRANSFUSIONMENU_BG_IO_LEFTLEG;
             text = QPATHTOEF(gui,data\body_image\leftleg_io.paa);
         };
-        BODY_BACKGROUND_IV(RightArm,Upper,IDC_TRANSFUSIONMENU_BG_IV_RIGHTARM_UPPER);
-        BODY_BACKGROUND_IV(RightArm,Middle,IDC_TRANSFUSIONMENU_BG_IV_RIGHTARM_MIDDLE);
-        BODY_BACKGROUND_IV(RightArm,Lower,IDC_TRANSFUSIONMENU_BG_IV_RIGHTARM_LOWER);
+        class BodyBackground_IV_RightArm_Upper: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_RIGHTARM_UPPER;
+            text = QPATHTOEF(gui,data\body_image\rightarm_iv_upper.paa);
+        };
+        class BodyBackground_IV_RightArm_Middle: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_RIGHTARM_MIDDLE;
+            text = QPATHTOEF(gui,data\body_image\rightarm_iv_middle.paa);
+        };
+        class BodyBackground_IV_RightArm_Lower: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_RIGHTARM_LOWER;
+            text = QPATHTOEF(gui,data\body_image\rightarm_iv_lower.paa);
+        };
 
-        BODY_BACKGROUND_IV(LeftArm,Upper,IDC_TRANSFUSIONMENU_BG_IV_LEFTARM_UPPER);
-        BODY_BACKGROUND_IV(LeftArm,Middle,IDC_TRANSFUSIONMENU_BG_IV_LEFTARM_MIDDLE);
-        BODY_BACKGROUND_IV(LeftArm,Lower,IDC_TRANSFUSIONMENU_BG_IV_LEFTARM_LOWER);
+        class BodyBackground_IV_LeftArm_Upper: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_LEFTARM_UPPER;
+            text = QPATHTOEF(gui,data\body_image\leftarm_iv_upper.paa);
+        };
+        class BodyBackground_IV_LeftArm_Middle: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_LEFTARM_MIDDLE;
+            text = QPATHTOEF(gui,data\body_image\leftarm_iv_middle.paa);
+        };
+        class BodyBackground_IV_LeftArm_Lower: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_LEFTARM_LOWER;
+            text = QPATHTOEF(gui,data\body_image\leftarm_iv_lower.paa);
+        };
 
-        BODY_BACKGROUND_IV(RightLeg,Upper,IDC_TRANSFUSIONMENU_BG_IV_RIGHTLEG_UPPER);
-        BODY_BACKGROUND_IV(RightLeg,Middle,IDC_TRANSFUSIONMENU_BG_IV_RIGHTLEG_MIDDLE);
-        BODY_BACKGROUND_IV(RightLeg,Lower,IDC_TRANSFUSIONMENU_BG_IV_RIGHTLEG_LOWER);
+        class BodyBackground_IV_RightLeg_Upper: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_RIGHTLEG_UPPER;
+            text = QPATHTOEF(gui,data\body_image\rightleg_iv_upper.paa);
+        };
+        class BodyBackground_IV_RightLeg_Middle: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_RIGHTLEG_MIDDLE;
+            text = QPATHTOEF(gui,data\body_image\rightleg_iv_middle.paa);
+        };
+        class BodyBackground_IV_RightLeg_Lower: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_RIGHTLEG_LOWER;
+            text = QPATHTOEF(gui,data\body_image\rightleg_iv_lower.paa);
+        };
 
-        BODY_BACKGROUND_IV(LeftLeg,Upper,IDC_TRANSFUSIONMENU_BG_IV_LEFTLEG_UPPER);
-        BODY_BACKGROUND_IV(LeftLeg,Middle,IDC_TRANSFUSIONMENU_BG_IV_LEFTLEG_MIDDLE);
-        BODY_BACKGROUND_IV(LeftLeg,Lower,IDC_TRANSFUSIONMENU_BG_IV_LEFTLEG_LOWER);
+        class BodyBackground_IV_LeftLeg_Upper: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_LEFTLEG_UPPER;
+            text = QPATHTOEF(gui,data\body_image\leftleg_iv_upper.paa);
+        };
+        class BodyBackground_IV_LeftLeg_Middle: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_LEFTLEG_MIDDLE;
+            text = QPATHTOEF(gui,data\body_image\leftleg_iv_middle.paa);
+        };
+        class BodyBackground_IV_LeftLeg_Lower: BodyBackground_IO_Torso {
+            idc = IDC_TRANSFUSIONMENU_BG_IV_LEFTLEG_LOWER;
+            text = QPATHTOEF(gui,data\body_image\leftleg_iv_lower.paa);
+        };
 
         class BodyBackground_Tourniquet_RightArm: BodyBackground {
             idc = IDC_TRANSFUSIONMENU_BG_TOURNIQUET_RIGHTARM;

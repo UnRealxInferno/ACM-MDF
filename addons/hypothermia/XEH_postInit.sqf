@@ -1,0 +1,9 @@
+#include "script_component.hpp"
+
+[QGVAR(useHandWarmer), LINKFUNC(useHandWarmerLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(applyFluidWarmer), LINKFUNC(applyFluidWarmerLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(removeFluidWarmer), LINKFUNC(removeFluidWarmerLocal)] call CBA_fnc_addEventHandler;
+
+[QACEGVAR(medical_treatment,fullHealLocalMod), LINKFUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
+[QACEGVAR(medical_gui,updateInjuryListGeneral), LINKFUNC(gui_updateInjuryListGeneral)] call CBA_fnc_addEventHandler;
+[QACEGVAR(medical_gui,updateInjuryListPart), LINKFUNC(gui_updateInjuryListPart)] call CBA_fnc_addEventHandler;

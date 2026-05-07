@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, Inferno
  * Calculates the blood volume change and decreases the IVs given to the unit.
  *
  * Arguments:
@@ -112,6 +112,7 @@ if (_salineVolume > 0) then {
 
 private _transfusionPain = 0;
 private _freshBloodEffectiveness = 0;
+private _hypothermiaFluidTemperatureImpact = 0;
 
 if (_unit getVariable [QEGVAR(circulation,IV_Bags_Active), false]) then {
     private _IVFlowMultiplier = 1;
@@ -189,7 +190,17 @@ if (_unit getVariable [QEGVAR(circulation,IV_Bags_Active), false]) then {
                 } else {
                     _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
                 };
-    
+
+                if (missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false]) then {
+                    private _fluidWarmers = _unit getVariable ["ACM_hypothermia_fluidWarmer", [0,0,0,0,0,0]];
+                    private _hasFluidWarmer = (_fluidWarmers param [_partIndex, 0]) > 0;
+                    private _temperatureImpact = [-0.35, 0.85] select _hasFluidWarmer;
+
+                    if (_type != "FBTK") then {
+                        _hypothermiaFluidTemperatureImpact = _hypothermiaFluidTemperatureImpact + (_bagChange * _fluidPassRatio * _temperatureImpact);
+                    };
+                };
+
                 switch (_type) do {
                     case "Plasma": {
                         _plasmaVolumeChange = _plasmaVolumeChange + (_bagChange / 1000);
@@ -285,6 +296,12 @@ if (_unit getVariable [QEGVAR(circulation,IV_Bags_Active), false]) then {
     } else {
         _unit setVariable [QEGVAR(circulation,IV_Bags), _fluidBags, _syncValues];
         _unit setVariable [QEGVAR(circulation,IV_Bags_FreshBloodEffect), _freshBloodEffectiveness, _syncValues];
+    };
+
+    if (_hypothermiaFluidTemperatureImpact != 0 && {missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false]}) then {
+        private _warmingImpact = _unit getVariable ["ACM_hypothermia_warmingImpact", 0];
+        _warmingImpact = (_warmingImpact + _hypothermiaFluidTemperatureImpact) max -4000 min 12000;
+        _unit setVariable ["ACM_hypothermia_warmingImpact", _warmingImpact, _syncValues];
     };
 };
 
@@ -389,4 +406,4 @@ _unit setVariable [QEGVAR(circulation,Blood_Volume), _bloodVolume, _syncValues];
 _unit setVariable [QEGVAR(circulation,Plasma_Volume), _plasmaVolume, _syncValues];
 _unit setVariable [QEGVAR(circulation,Saline_Volume), _salineVolume, _syncValues];
 
-_bloodVolume + _plasmaVolume + _salineVolume min DEFAULT_BLOOD_VOLUME; 
+_bloodVolume + _plasmaVolume + _salineVolume min DEFAULT_BLOOD_VOLUME;
