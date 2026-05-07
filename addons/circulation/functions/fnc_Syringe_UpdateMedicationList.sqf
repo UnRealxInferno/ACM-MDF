@@ -32,10 +32,15 @@ if (GVAR(SyringeDraw_InventorySelection) == 2) then {
 
         if (_count > 0) then {
             private _config = (configFile >> "CfgWeapons" >> _classname);
+            private _medicationClass = getText (_config >> "ACM_medication");
+            if (_medicationClass isEqualTo "") then {
+                _medicationClass = ((_classname splitString "_") param [2, ""]);
+            };
+            if (_medicationClass isEqualTo "") then { continue; };
 
             private _i = _ctrlMedList lbAdd getText (_config >> "displayName");
             _ctrlMedList lbSetPicture [_i, getText (_config >> "picture")];
-            _ctrlMedList lbSetData [_i, ((_classname splitString "_") select 2)];
+            _ctrlMedList lbSetData [_i, _medicationClass];
             _ctrlMedList lbSetTooltip [_i, (format [LLSTRING(Common_Available), _count])];
         };
     } forEach ACM_MEDICATION_VIALS;
@@ -48,10 +53,15 @@ if (GVAR(SyringeDraw_InventorySelection) == 2) then {
 
         if (_count > 0) then {
             private _config = (configFile >> "CfgWeapons" >> _classname);
+            private _medicationClass = getText (_config >> "ACM_medication");
+            if (_medicationClass isEqualTo "") then {
+                _medicationClass = ((_classname splitString "_") param [2, ""]);
+            };
+            if (_medicationClass isEqualTo "") then { continue; };
 
             private _i = _ctrlMedList lbAdd getText (_config >> "displayName");
             _ctrlMedList lbSetPicture [_i, getText (_config >> "picture")];
-            _ctrlMedList lbSetData [_i, ((_classname splitString "_") select 2)];
+            _ctrlMedList lbSetData [_i, _medicationClass];
             _ctrlMedList lbSetTooltip [_i, (format [LLSTRING(Common_Available), _count])];
         };
     } forEach ACM_MEDICATION_VIALS;

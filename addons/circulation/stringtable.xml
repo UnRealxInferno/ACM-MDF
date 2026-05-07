@@ -1135,17 +1135,17 @@
                 <Spanish>Cloruro de calcio</Spanish>
                 <Turkish>Kalsiyum klorür</Turkish>
             </Key>
-            <Key ID="STR_ACM_Circulation_Medication_Ertapenem">
-                <English>Ertapenem</English>
-                <Polish>Eratapenem</Polish>
-                <German>Ertapenem</German>
-                <French>Ertapenem</French>
-                <Portuguese>Ertapenem</Portuguese>
-                <Russian>Эртапенем</Russian>
-                <Ukrainian>Ертапенем</Ukrainian>
-                <Korean>에르타페넴 (Ertapenem)</Korean>
-                <Spanish>Ertapenem</Spanish>
-                <Turkish>Ertapenem</Turkish>
+            <Key ID="STR_ACM_Circulation_Medication_Propofol">
+                <English>Propofol</English>
+                <Polish>Propofol</Polish>
+                <German>Propofol</German>
+                <French>Propofol</French>
+                <Portuguese>Propofol</Portuguese>
+                <Russian>Пропофол</Russian>
+                <Ukrainian>Пропофол</Ukrainian>
+                <Korean>프로포폴 (Propofol)</Korean>
+                <Spanish>Propofol</Spanish>
+                <Turkish>Propofol</Turkish>
             </Key>
             <Key ID="STR_ACM_Circulation_Medication_Esmolol">
                 <English>Esmolol</English>
@@ -1481,8 +1481,8 @@
                 <Spanish>Corregir hipocalcemia post-transfusión</Spanish>
                 <Turkish>Kan transfüzyonu sonrası düşük kalsiyumu yönetmek için kullanılır</Turkish>
             </Key>
-            <Key ID="STR_ACM_Circulation_Vial_Ertapenem">
-                <English>Ertapenem Vial (1g/3.2ml)</English>
+            <Key ID="STR_ACM_Circulation_Vial_Propofol">
+                <English>Propofol Vial (200mg/20ml)</English>
                 <Polish>Ertapenem (1g/3.2ml)</Polish>
                 <German>Ertapanem Ampulle (1g/3.2ml)</German>
                 <French>Ertapenem Flacon (1g/3.2ml)</French>
@@ -1493,8 +1493,8 @@
                 <Spanish>Vial de ertapenem (1 g/3,2 ml)</Spanish>
                 <Turkish>Ertapenem flakonu (1g/3.2ml)</Turkish>
             </Key>
-            <Key ID="STR_ACM_Circulation_Vial_Ertapenem_Desc">
-                <English>Used to manage infections from open wounds, required before evacuation of casualty</English>
+            <Key ID="STR_ACM_Circulation_Vial_Propofol_Desc">
+                <English>Sedative-hypnotic used for procedural anesthesia and deep sedation during surgery.</English>
                 <Polish>Używany do walki z infekcjami otwartych ran, wymagany do ewakuacji </Polish>
                 <German>Antibiotika, um Wundinfektionen bei offenen Wunden vorzubeugen. Wird vor Evakuierung benötigt.</German>
                 <French>Utilisé pour traiter les infections des plaies ouvertes, nécessaire avant l'évacuation de la victime.</French>
@@ -4241,6 +4241,35 @@
                 <Korean>차량</Korean>
                 <Spanish>Vehículo</Spanish>
                 <Turkish>Araç</Turkish>
+            </Key>
+        </Container>
+        <Container name="// Surgery Medication //">
+            <Key ID="STR_ACM_Circulation_Medication_Etomidate">
+                <English>Etomidate</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Medication_Lorazepam">
+                <English>Lorazepam</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Medication_Flumazenil">
+                <English>Flumazenil</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Etomidate">
+                <English>Etomidate Vial (20mg/10ml)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Etomidate_Desc">
+                <English>Vial containing etomidate (2mg/ml) for syringe draw and IV/IM administration.</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Lorazepam">
+                <English>Lorazepam Vial (4mg/2ml)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Lorazepam_Desc">
+                <English>Vial containing lorazepam (2mg/ml) for sedation support during surgical care.</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Flumazenil">
+                <English>Flumazenil Vial (0.5mg/5ml)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Flumazenil_Desc">
+                <English>Vial containing flumazenil (0.1mg/ml); typical initial reversal push is 0.2mg (200mcg), then titrate.</English>
             </Key>
         </Container>
     </Package>
