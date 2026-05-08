@@ -20,7 +20,6 @@
 params ["_medic", "_patient", "_bodyPart"];
 
 if !(GVAR(enableFractureSeverity)) exitWith {false};
-if (missionNamespace getVariable [QEGVAR(surgery,enable_fracture), false]) exitWith {false};
 
 private _partIndex = GET_BODYPART_INDEX(_bodyPart);
 private _bodyPartDamage = ((_patient getVariable [QACEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]) select _partIndex);

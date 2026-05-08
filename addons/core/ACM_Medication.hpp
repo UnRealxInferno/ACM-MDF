@@ -174,50 +174,6 @@ class ACM_Medication {
             maxEffectDose = 83;
         };
 
-        class Etomidate_IV: ACM_IV_Medication {
-            medicationType = "Etomidate";
-            minPainReduce = 0.25;
-            painReduce = 0.4;
-            maxPainReduce = 0.6;
-            hrIncrease[] = {-5, -20};
-            rrAdjust[] = {-1, -4};
-            timeInSystem = 240;
-            timeTillMaxEffect = 5;
-            maxEffectTime = 120;
-            maxDose = 40;
-            maxDoseDeviation = 20;
-            unstableDose = 40;
-            maxEffectDose = 20;
-            weightEffect = 0;
-        };
-
-        class Lorazepam_IV: ACM_IV_Medication {
-            medicationType = "Benzodiazepine";
-            hrIncrease[] = {-2, -8};
-            rrAdjust[] = {-1, -4};
-            timeInSystem = 900;
-            timeTillMaxEffect = 15;
-            maxEffectTime = 720;
-            maxDose = 8;
-            maxDoseDeviation = 4;
-            unstableDose = 8;
-            maxEffectDose = 4;
-            weightEffect = 0;
-            viscosityChange = -5;
-        };
-
-        class Flumazenil_IV: ACM_IV_Medication {
-            medicationType = "Benzodiazepine_Antagonist";
-            timeInSystem = 420;
-            timeTillMaxEffect = 10;
-            maxEffectTime = 300;
-            maxDose = 3;
-            maxDoseDeviation = 2;
-            unstableDose = 3;
-            maxEffectDose = 1;
-            weightEffect = 0;
-        };
-
         class TXA_IV: ACM_IV_Medication {
             medicationType = "TXA";
             timeInSystem = 900;
@@ -285,22 +241,14 @@ class ACM_Medication {
             weightEffect = 0;
         };
 
-        class Propofol_IV: ACM_IV_Medication {
-            medicationType = "Propofol";
-            hrIncrease[] = {-4, -14};
-            rrAdjust[] = {-2, -6};
-            breathingEffectivenessAdjust[] = {-0.02, -0.08};
-            viscosityChange = -6;
-            timeInSystem = 10800;
+        class Ertapenem_IV: ACM_IV_Medication {
+            medicationType = "Ertapenem";
+            timeInSystem = 900;
             timeTillMaxEffect = 5;
-            maxEffectTime = 7200;
-            maxDose = 600;
-            maxDoseDeviation = 200;
-            unstableDose = 450;
-            maxEffectDose = 200;
+            maxEffectTime = 600;
+            maxEffectDose = 1000;
             weightEffect = 0;
         };
-        class Ertapenem_IV: Propofol_IV {};
 
         class Esmolol_IV: ACM_IV_Medication {
             hrIncrease[] = {-10, -25};
@@ -439,22 +387,14 @@ class ACM_Medication {
             weightEffect = 0;
         };
 
-        class Propofol: ACM_IM_Medication {
-            medicationType = "Propofol";
-            hrIncrease[] = {-3, -10};
-            rrAdjust[] = {-2, -5};
-            breathingEffectivenessAdjust[] = {-0.01, -0.05};
-            viscosityChange = -4;
-            timeInSystem = 10800;
-            timeTillMaxEffect = 45;
-            maxEffectTime = 7200;
-            maxDose = 600;
-            maxDoseDeviation = 200;
-            unstableDose = 450;
-            maxEffectDose = 200;
+        class Ertapenem: ACM_IM_Medication {
+            medicationType = "Ertapenem";
+            timeInSystem = 1200;
+            timeTillMaxEffect = 30;
+            maxEffectTime = 900;
+            maxEffectDose = 1000;
             weightEffect = 0;
         };
-        class Ertapenem: Propofol {};
 
         class Midazolam: ACM_IM_Medication {
             timeInSystem = 1200;
@@ -465,50 +405,6 @@ class ACM_Medication {
             maxDoseDeviation = 10;
             unstableDose = 30;
             maxEffectDose = 10;
-            weightEffect = 0;
-        };
-
-        class Etomidate: ACM_IM_Medication {
-            medicationType = "Etomidate";
-            minPainReduce = 0.25;
-            painReduce = 0.4;
-            maxPainReduce = 0.6;
-            hrIncrease[] = {-3, -12};
-            rrAdjust[] = {-1, -3};
-            timeInSystem = 360;
-            timeTillMaxEffect = 20;
-            maxEffectTime = 240;
-            maxDose = 40;
-            maxDoseDeviation = 20;
-            unstableDose = 40;
-            maxEffectDose = 20;
-            weightEffect = 0;
-        };
-
-        class Lorazepam: ACM_IM_Medication {
-            medicationType = "Benzodiazepine";
-            hrIncrease[] = {-2, -6};
-            rrAdjust[] = {-1, -3};
-            timeInSystem = 1200;
-            timeTillMaxEffect = 30;
-            maxEffectTime = 900;
-            maxDose = 8;
-            maxDoseDeviation = 4;
-            unstableDose = 8;
-            maxEffectDose = 4;
-            weightEffect = 0;
-            viscosityChange = -5;
-        };
-
-        class Flumazenil: ACM_IM_Medication {
-            medicationType = "Benzodiazepine_Antagonist";
-            timeInSystem = 600;
-            timeTillMaxEffect = 20;
-            maxEffectTime = 420;
-            maxDose = 3;
-            maxDoseDeviation = 2;
-            unstableDose = 3;
-            maxEffectDose = 1;
             weightEffect = 0;
         };
 
@@ -583,23 +479,8 @@ class ACM_Medication {
             classnames[] = {"Lidocaine_IV"};
         };
 
-        class Propofol {
-            classnames[] = {"Propofol_IV", "Propofol"};
-        };
         class Ertapenem {
             classnames[] = {"Ertapenem_IV", "Ertapenem"};
-        };
-
-        class Etomidate {
-            classnames[] = {"Etomidate_IV", "Etomidate"};
-        };
-
-        class Benzodiazepine {
-            classnames[] = {"Lorazepam_IV", "Lorazepam"};
-        };
-
-        class Benzodiazepine_Antagonist {
-            classnames[] = {"Flumazenil_IV", "Flumazenil"};
         };
     };
     class Concentration {
@@ -675,12 +556,11 @@ class ACM_Medication {
             volume = 10;
         };
 
-        class Propofol {
-            concentration = 10;
-            dose = "200mg/20ml";
-            volume = 20;
+        class Ertapenem {
+            concentration = 312.5;
+            dose = "1g/3.2ml";
+            volume = 3.2;
         };
-        class Ertapenem: Propofol {};
 
         class Esmolol {
             concentration = 10;
@@ -692,24 +572,6 @@ class ACM_Medication {
             concentration = 100;
             dose = "300mg/3ml";
             volume = 3;
-        };
-
-        class Etomidate {
-            concentration = 2;
-            dose = "20mg/10ml";
-            volume = 10;
-        };
-
-        class Lorazepam {
-            concentration = 2;
-            dose = "4mg/2ml";
-            volume = 2;
-        };
-
-        class Flumazenil {
-            concentration = 0.1;
-            dose = "0.5mg/5ml";
-            volume = 5;
         };
     };
 };

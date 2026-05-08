@@ -706,30 +706,15 @@ class ACEGVAR(medical_treatment,actions) {
     SYRINGE_ACTION_IV(CalciumChloride,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,CalciumChloride,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,CalciumChloride)));
     SYRINGE_ACTION_IV(CalciumChloride,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,CalciumChloride,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,CalciumChloride)));
 
-    SYRINGE_ACTION_IV(Propofol,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Propofol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Propofol)));
-    SYRINGE_ACTION_IV(Propofol,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Propofol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Propofol)));
-    SYRINGE_ACTION_IV(Propofol,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Propofol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Propofol)));
-    SYRINGE_ACTION_IV(Propofol,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Propofol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Propofol)));
+    SYRINGE_ACTION_IV(Ertapenem,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Ertapenem,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Ertapenem)));
+    SYRINGE_ACTION_IV(Ertapenem,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Ertapenem,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Ertapenem)));
+    SYRINGE_ACTION_IV(Ertapenem,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Ertapenem,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Ertapenem)));
+    SYRINGE_ACTION_IV(Ertapenem,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Ertapenem,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Ertapenem)));
 
     SYRINGE_ACTION_IV(Esmolol,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Esmolol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Esmolol)));
     SYRINGE_ACTION_IV(Esmolol,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Esmolol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Esmolol)));
     SYRINGE_ACTION_IV(Esmolol,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Esmolol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Esmolol)));
     SYRINGE_ACTION_IV(Esmolol,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Esmolol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Esmolol)));
-
-    SYRINGE_ACTION_IV(Etomidate,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
-    SYRINGE_ACTION_IV(Etomidate,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
-    SYRINGE_ACTION_IV(Etomidate,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
-    SYRINGE_ACTION_IV(Etomidate,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
-
-    SYRINGE_ACTION_IV(Lorazepam,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Lorazepam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Lorazepam)));
-    SYRINGE_ACTION_IV(Lorazepam,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Lorazepam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Lorazepam)));
-    SYRINGE_ACTION_IV(Lorazepam,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Lorazepam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Lorazepam)));
-    SYRINGE_ACTION_IV(Lorazepam,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Lorazepam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Lorazepam)));
-
-    SYRINGE_ACTION_IV(Flumazenil,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
-    SYRINGE_ACTION_IV(Flumazenil,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
-    SYRINGE_ACTION_IV(Flumazenil,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
-    SYRINGE_ACTION_IV(Flumazenil,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
 
     SYRINGE_ACTION_IV(Dimercaprol,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Dimercaprol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Dimercaprol)));
     SYRINGE_ACTION_IV(Dimercaprol,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Dimercaprol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Dimercaprol)));
@@ -820,30 +805,15 @@ class ACEGVAR(medical_treatment,actions) {
     SYRINGE_ACTION_IM(CalciumChloride,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,CalciumChloride,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,CalciumChloride)));
     SYRINGE_ACTION_IM(CalciumChloride,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,CalciumChloride,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,CalciumChloride)));
 
-    SYRINGE_ACTION_IM(Propofol,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Propofol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Propofol)));
-    SYRINGE_ACTION_IM(Propofol,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Propofol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Propofol)));
-    SYRINGE_ACTION_IM(Propofol,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,Propofol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Propofol)));
-    SYRINGE_ACTION_IM(Propofol,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,Propofol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Propofol)));
+    SYRINGE_ACTION_IM(Ertapenem,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Ertapenem,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Ertapenem)));
+    SYRINGE_ACTION_IM(Ertapenem,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Ertapenem,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Ertapenem)));
+    SYRINGE_ACTION_IM(Ertapenem,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,Ertapenem,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Ertapenem)));
+    SYRINGE_ACTION_IM(Ertapenem,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,Ertapenem,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Ertapenem)));
 
     SYRINGE_ACTION_IM(Esmolol,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Esmolol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Esmolol)));
     SYRINGE_ACTION_IM(Esmolol,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Esmolol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Esmolol)));
     SYRINGE_ACTION_IM(Esmolol,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,Esmolol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Esmolol)));
     SYRINGE_ACTION_IM(Esmolol,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,Esmolol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Esmolol)));
-
-    SYRINGE_ACTION_IM(Etomidate,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Etomidate,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Etomidate)));
-    SYRINGE_ACTION_IM(Etomidate,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Etomidate,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Etomidate)));
-    SYRINGE_ACTION_IM(Etomidate,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,Etomidate,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Etomidate)));
-    SYRINGE_ACTION_IM(Etomidate,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,Etomidate,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Etomidate)));
-
-    SYRINGE_ACTION_IM(Lorazepam,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Lorazepam,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Lorazepam)));
-    SYRINGE_ACTION_IM(Lorazepam,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Lorazepam,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Lorazepam)));
-    SYRINGE_ACTION_IM(Lorazepam,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,Lorazepam,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Lorazepam)));
-    SYRINGE_ACTION_IM(Lorazepam,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,Lorazepam,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Lorazepam)));
-
-    SYRINGE_ACTION_IM(Flumazenil,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Flumazenil,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Flumazenil)));
-    SYRINGE_ACTION_IM(Flumazenil,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Flumazenil,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Flumazenil)));
-    SYRINGE_ACTION_IM(Flumazenil,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,Flumazenil,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Flumazenil)));
-    SYRINGE_ACTION_IM(Flumazenil,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,Flumazenil,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Flumazenil)));
 
     SYRINGE_ACTION_IM(Dimercaprol,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Dimercaprol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Dimercaprol)));
     SYRINGE_ACTION_IM(Dimercaprol,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Dimercaprol,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Dimercaprol)));

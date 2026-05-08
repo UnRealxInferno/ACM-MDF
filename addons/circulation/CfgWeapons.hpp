@@ -177,44 +177,16 @@ class CfgWeapons {
         descriptionShort = CSTRING(Vial_CalciumChloride_Desc);
     };
 
-    class ACM_Vial_Propofol: ACM_Vial_Epinephrine {
+    class ACM_Vial_Ertapenem: ACM_Vial_Epinephrine {
         picture = QPATHTOF(ui\vial_ertapenem_ca.paa);
-        displayName = CSTRING(Vial_Propofol);
-        descriptionShort = CSTRING(Vial_Propofol_Desc);
-        ACM_medication = "Propofol";
-    };
-
-    class ACM_Vial_Ertapenem: ACM_Vial_Propofol {
-        scope = 1;
-        scopeArsenal = 0;
-        ace_arsenal_hide = 1;
+        displayName = CSTRING(Vial_Ertapenem);
+        descriptionShort = CSTRING(Vial_Ertapenem_Desc);
     };
 
     class ACM_Vial_Esmolol: ACM_Vial_Epinephrine {
         picture = QPATHTOF(ui\vial_esmolol_ca.paa);
         displayName = CSTRING(Vial_Esmolol);
         descriptionShort = CSTRING(Vial_Esmolol_Desc);
-    };
-
-    class ACM_Vial_Etomidate: ACM_Vial_Epinephrine {
-        picture = QPATHTOF(ui\vial_etomidate_ca.paa);
-        displayName = CSTRING(Vial_Etomidate);
-        descriptionShort = CSTRING(Vial_Etomidate_Desc);
-        ACM_medication = "Etomidate";
-    };
-
-    class ACM_Vial_Lorazepam: ACM_Vial_Epinephrine {
-        picture = QPATHTOF(ui\vial_lorazepam_ca.paa);
-        displayName = CSTRING(Vial_Lorazepam);
-        descriptionShort = CSTRING(Vial_Lorazepam_Desc);
-        ACM_medication = "Lorazepam";
-    };
-
-    class ACM_Vial_Flumazenil: ACM_Vial_Epinephrine {
-        picture = QPATHTOF(ui\vial_flumazenil_ca.paa);
-        displayName = CSTRING(Vial_Flumazenil);
-        descriptionShort = CSTRING(Vial_Flumazenil_Desc);
-        ACM_medication = "Flumazenil";
     };
 
     class ACM_Spray_Naloxone: ACM_Vial_Epinephrine {
@@ -236,30 +208,6 @@ class CfgWeapons {
         displayName = CSTRING(Ampule_Dimercaprol);
         descriptionShort = CSTRING(Ampule_Dimercaprol_Desc);
         scope = 1;
-    };
-
-    class kat_etomidate: ACM_Vial_Etomidate {
-        scope = 2;
-        scopeArsenal = 0;
-        author = "Mazinski, Inferno";
-        ace_arsenal_hide = 1;
-        ACM_medication = "Etomidate";
-    };
-
-    class kat_lorazepam: ACM_Vial_Lorazepam {
-        scope = 2;
-        scopeArsenal = 0;
-        author = "Mazinski, Inferno";
-        ace_arsenal_hide = 1;
-        ACM_medication = "Lorazepam";
-    };
-
-    class kat_flumazenil: ACM_Vial_Flumazenil {
-        scope = 2;
-        scopeArsenal = 0;
-        author = "Mazinski, Inferno";
-        ace_arsenal_hide = 1;
-        ACM_medication = "Flumazenil";
     };
 
     class ACM_Paracetamol_SinglePack: ACM_Spray_Naloxone {

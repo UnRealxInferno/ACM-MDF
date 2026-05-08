@@ -55,14 +55,13 @@ if (GVAR(hypothermiaActive)) then {
         if (GET_EFF_BLOOD_VOLUME(_unit) > 4) then {
             private _impact = _unit getVariable [QGVAR(warmingImpact), 0];
             if (_activeWarmers > 0) then {
-                // Scale warming with the number of active warmers so stacking matters.
-                _impact = _impact + (180 * _activeWarmers);
+                _impact = _impact + 200;
             };
             if (_impact > 0) then {
-                _impact = _impact - 80;
+                _impact = _impact - 100;
             } else {
                 if (_impact < 0) then {
-                    _impact = _impact + 160;
+                    _impact = _impact + 200;
                 };
             };
             _unit setVariable [QGVAR(warmingImpact), (_impact max -4000) min 12000, true];

@@ -33,9 +33,6 @@
 [QGVAR(handleMed_AtropineLocal), LINKFUNC(handleMed_AtropineLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(handleMed_CalciumChlorideLocal), LINKFUNC(handleMed_CalciumChlorideLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(handleMed_DimercaprolLocal), LINKFUNC(handleMed_DimercaprolLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(handleMed_FlumazenilLocal), LINKFUNC(handleMed_FlumazenilLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(handleMed_LorazepamLocal), LINKFUNC(handleMed_LorazepamLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(handleMed_PropofolLocal), LINKFUNC(handleMed_PropofolLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(handleMed_NaloxoneLocal), LINKFUNC(handleMed_NaloxoneLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(handleMed_TXALocal), LINKFUNC(handleMed_TXALocal)] call CBA_fnc_addEventHandler;
 [QGVAR(handleMed_KetamineLocal), LINKFUNC(handleAnestheticEffects)] call CBA_fnc_addEventHandler;
@@ -49,9 +46,9 @@
     params ["_patient", "_bodyPart", "_classname", ["_dose", 1]];
 
     // Handle special medication effects
-    if (_classname in ["AmmoniaInhalant", "Naloxone", "TXA_IV", "Ketamine", "Ketamine_IV", "Lidocaine", "CalciumChloride_IV", "Adenosine_IV", "Atropine", "Atropine_IV", "Dimercaprol", "Lorazepam", "Lorazepam_IV", "Flumazenil", "Flumazenil_IV", "Propofol", "Propofol_IV"]) then {
+    if (_classname in ["AmmoniaInhalant", "Naloxone", "TXA_IV", "Ketamine", "Ketamine_IV", "Lidocaine", "CalciumChloride_IV", "Adenosine_IV", "Atropine", "Atropine_IV", "Dimercaprol"]) then {
         private _shortClassname = (_classname splitString "_") select 0;
-        [(format ["ACM_circulation_handleMed_%1Local", _shortClassname]), [_patient, _bodyPart, _classname, _dose], _patient] call CBA_fnc_targetEvent;
+        [(format ["ACM_circulation_handleMed_%1Local", toLower _shortClassname]), [_patient, _bodyPart, _classname, _dose], _patient] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addEventHandler;
 
