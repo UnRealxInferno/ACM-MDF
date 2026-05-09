@@ -132,4 +132,22 @@ class CfgMagazines {
     PREPARE_SYRINGE(500,0.7,5,Dimercaprol,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Dimercaprol,5)),__EVAL(call compile SYRINGE_FORMAT_DESC(Dimercaprol,5)));
     PREPARE_SYRINGE(300,0.6,3,Dimercaprol,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Dimercaprol,3)),__EVAL(call compile SYRINGE_FORMAT_DESC(Dimercaprol,3)));
     PREPARE_SYRINGE(100,0.5,1,Dimercaprol,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Dimercaprol,1)),__EVAL(call compile SYRINGE_FORMAT_DESC(Dimercaprol,1)));
+<<<<<<< HEAD
+
+    PREPARE_SYRINGE(1000,0.9,10,Etomidate,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Etomidate,10)),__EVAL(call compile SYRINGE_FORMAT_DESC(Etomidate,10)));
+    PREPARE_SYRINGE(500,0.7,5,Etomidate,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Etomidate,5)),__EVAL(call compile SYRINGE_FORMAT_DESC(Etomidate,5)));
+    PREPARE_SYRINGE(300,0.6,3,Etomidate,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Etomidate,3)),__EVAL(call compile SYRINGE_FORMAT_DESC(Etomidate,3)));
+    PREPARE_SYRINGE(100,0.5,1,Etomidate,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Etomidate,1)),__EVAL(call compile SYRINGE_FORMAT_DESC(Etomidate,1)));
+
+    PREPARE_SYRINGE(1000,0.9,10,Midazolam,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Midazolam,10)),__EVAL(call compile SYRINGE_FORMAT_DESC(Midazolam,10)));
+    PREPARE_SYRINGE(500,0.7,5,Midazolam,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Midazolam,5)),__EVAL(call compile SYRINGE_FORMAT_DESC(Midazolam,5)));
+    PREPARE_SYRINGE(300,0.6,3,Midazolam,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Midazolam,3)),__EVAL(call compile SYRINGE_FORMAT_DESC(Midazolam,3)));
+    PREPARE_SYRINGE(100,0.5,1,Midazolam,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Midazolam,1)),__EVAL(call compile SYRINGE_FORMAT_DESC(Midazolam,1)));
+
+    PREPARE_SYRINGE(1000,0.9,10,Flumazenil,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Flumazenil,10)),__EVAL(call compile SYRINGE_FORMAT_DESC(Flumazenil,10)));
+    PREPARE_SYRINGE(500,0.7,5,Flumazenil,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Flumazenil,5)),__EVAL(call compile SYRINGE_FORMAT_DESC(Flumazenil,5)));
+    PREPARE_SYRINGE(300,0.6,3,Flumazenil,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Flumazenil,3)),__EVAL(call compile SYRINGE_FORMAT_DESC(Flumazenil,3)));
+    PREPARE_SYRINGE(100,0.5,1,Flumazenil,__EVAL(call compile SYRINGE_FORMAT_DISPLAY(Flumazenil,1)),__EVAL(call compile SYRINGE_FORMAT_DESC(Flumazenil,1)));
+=======
+>>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
 };

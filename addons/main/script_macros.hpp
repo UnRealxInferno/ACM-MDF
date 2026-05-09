@@ -199,6 +199,7 @@
 #define ACM_INCOMPATIBLE_ADDONS [["pir","Project Injury Reaction"],["kat_main","KAT Advanced Medical"],["MIRA_Vehicle_Medical","ACE Vehicle Medical"],["KJW_MedicalExpansion_core", "KJW's Medical Expansion"],["CBRN_scripts","Chemical Warfare PLUS"]]
 
 #define ALL_BODY_PARTS_PRIORITY ["body", "head", "leftarm", "rightarm", "leftleg", "rightleg"]
+#define STRING_BODY_PARTS ["head", "body", "left arm", "right arm", "left leg", "right leg"]
 
 #define GET_BODYPART_INDEX(bodypart) (ALL_BODY_PARTS find toLowerANSI bodypart)
 

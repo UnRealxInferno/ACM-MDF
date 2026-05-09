@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACM">
+    <Package name="Surgery">
+        <Key ID="STR_ACM_surgery_cba_name">
+            <English>ACM Surgery</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SubCategory_Fractures">
+            <English>Fractures</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SubCategory_SurgicalActions">
+            <English>Surgical Actions</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SubCategory_NPWT">
+            <English>NPWT</English>
+        </Key>
+
+        <!-- Settings -->
+        <Key ID="STR_ACM_surgery_ADVANCED_FRACTURE">
+            <English>Enables advanced fractures</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SIMPLE_FRACTURE_CHANCE">
+            <English>Simple fracture chance</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SIMPLE_FRACTURE_CHANCE_DESC">
+            <English>Chance that a fracture will be simple. Default 60%</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_CLOSED_REDUCTION_FAIL">
+            <English>Closed reduction fail chance</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_CLOSED_REDUCTION_FAIL_DESC">
+            <English>Chance that closed reduction will fail. Default 10%</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_COMPOUND_FRACTURE_CHANCE">
+            <English>Compound fracture chance</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_COMPOUND_FRACTURE_CHANCE_DESC">
+            <English>Chance that a fracture will be compound. Default 30%</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_FRACTURE_CHECK_MEDLEVEL">
+            <English>Check Fracture: Required medical level</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_SELF_CHECKFRACTURE">
+            <English>Allow self check fracture</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_CLOSED_TIMER">
+            <English>Closed reduction time (s)</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_FRACTURE_CHECK_TIMER">
+            <English>Check fracture time (s)</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_CLOSED_REDUCTION_MEDLEVEL">
+            <English>Closed Reduction: Required medical level</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_CLOSED_LOCATION">
+            <English>Closed Reduction: Locations</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_NPWT_ACTION_MEDLEVEL">
+            <English>NPWT: Required medical level</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_NPWT_LOCATION">
+            <English>NPWT: Locations</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_NPWTTime">
+            <English>NPWT time per wound (s)</English>
+        </Key>
+
+        <!-- Treatment actions -->
+        <Key ID="STR_ACM_surgery_fracture_check">
+            <English>Check Fracture</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_fracture_checking">
+            <English>Checking fracture...</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_fracture_closed">
+            <English>Perform Closed Reduction</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_fracture_open">
+            <English>Perform Open Reduction</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_perform">
+            <English>Performing...</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_fracture_fail">
+            <English>Surgical action failed</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_fracture_fail_analgesia">
+            <English>Patient requires IV analgesia (Ketamine/Fentanyl)</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Scalpel_Use">
+            <English>Make Incision</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Retractor_Use">
+            <English>Expose with Retractor</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Retractor_Action">
+            <English>Exposing...</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Clamp_Use">
+            <English>Apply Clamp</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Clamp_Action">
+            <English>Clamping...</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Irrigate_Use">
+            <English>Irrigate Wound</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Irrigate_Action">
+            <English>Irrigating...</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Reset_Surgery">
+            <English>Reset Surgery</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Vacuum_Use">
+            <English>Apply NPWT (Vacuum)</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Vacuum_Action">
+            <English>Applying NPWT...</English>
+        </Key>
+
+        <!-- Fracture types -->
+        <Key ID="STR_ACM_surgery_SIMPLE_FRACTURE">
+            <English>Simple Fracture</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_COMPOUND_FRACTURE">
+            <English>Compound Fracture</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_COMMINUTED_FRACTURE">
+            <English>Comminuted Fracture</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_fracture_log">
+            <English>%1 present on %2</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_incision_log">
+            <English>%1 made an incision on the %2</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_surgery_log">
+            <English>%1 %2 the fracture on the %3</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_EXPOSED">
+            <English>exposed</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_IRRIGATED">
+            <English>irrigated</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_CLAMPED">
+            <English>clamped</English>
+        </Key>
+
+        <!-- Settings - Open Reduction -->
+        <Key ID="STR_ACM_surgery_INCISION_TIMER">
+            <English>Incision time (s)</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_INTERMEDIATE_TIMER">
+            <English>Intermediate step time (s)</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_INTERMEDIATE_TIMER_DESC">
+            <English>Time for expose, clamp, and irrigate steps</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_OPEN_TIMER">
+            <English>Open reduction time (s)</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SURGICAL_ACTION_MEDLEVEL">
+            <English>Surgical actions: Required medical level</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SURGICAL_LOCATION">
+            <English>Surgical actions: Locations</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_ConsciousnessRequirement">
+            <English>Surgery consciousness requirement</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_ConsciousnessRequirement_DESC">
+            <English>0: Surgery causes unconsciousness. 1: Patient must be unconscious. 2: IV analgesics required (Ketamine/Fentanyl). 3: Anesthesia (Etomidate/Midazolam) required.</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_Causes_Unconsciousness">
+            <English>Causes Unconsciousness</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_Unconsciousness_Required">
+            <English>Requires Unconsciousness</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_No_Unconsciousness">
+            <English>IV Analgesics Required</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_SETTING_Anesthesia">
+            <English>Anesthesia Required</English>
+        </Key>
+
+        <!-- Items -->
+        <Key ID="STR_ACM_surgery_Scalpel_displayName">
+            <English>Scalpel</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Scalpel_DescShort">
+            <English>Surgical scalpel for making incisions</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Retractor_displayName">
+            <English>Retractor</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Retractor_DescShort">
+            <English>Surgical retractor for exposing fracture sites</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Clamp_displayName">
+            <English>Bone Clamp</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Clamp_DescShort">
+            <English>Surgical clamp for comminuted fracture reduction</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Plate_displayName">
+            <English>Bone Plate</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Plate_DescShort">
+            <English>Titanium plate for open fracture fixation</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Vacuum_displayName">
+            <English>NPWT Vacuum Pump</English>
+        </Key>
+        <Key ID="STR_ACM_surgery_Vacuum_DescShort">
+            <English>Negative pressure wound therapy device</English>
+        </Key>
+    </Package>
+</Project>

@@ -1216,6 +1216,15 @@
                 <French>Dimercaprol</French>
                 <Polish>Dimercaprol</Polish>
             </Key>
+            <Key ID="STR_ACM_Circulation_Medication_Etomidate">
+                <English>Etomidate</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Medication_Midazolam">
+                <English>Midazolam</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Medication_Flumazenil">
+                <English>Flumazenil</English>
+            </Key>
         </Container>
         <Container name="// Items - Medication //">
             <Key ID="STR_ACM_Circulation_Vial_Epinephrine">
@@ -1528,6 +1537,24 @@
                 <Korean>단시간 심박수를 낮추는 데 사용됩니다.</Korean>
                 <Spanish>Reducir frecuencia cardíaca temporalmente</Spanish>
                 <Turkish>Kısa süreliğine kalp hızını düşürmek için kullanılır</Turkish>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Etomidate">
+                <English>Etomidate Vial (20mg/10ml)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Etomidate_Desc">
+                <English>Intravenous anesthetic for surgical procedures</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Midazolam">
+                <English>Midazolam Vial (5mg/2ml)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Midazolam_Desc">
+                <English>Benzodiazepine sedative for procedural anesthesia</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Flumazenil">
+                <English>Flumazenil Vial (0.5mg/5ml)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_Flumazenil_Desc">
+                <English>Benzodiazepine reversal agent</English>
             </Key>
             <Key ID="STR_ACM_Circulation_Spray_Naloxone">
                 <English>Naloxone Nasal Spray</English>

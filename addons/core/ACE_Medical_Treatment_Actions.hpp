@@ -160,13 +160,6 @@ class ACEGVAR(medical_treatment,actions) {
         treatmentTime = QUOTE([ARR_4(_medic,_patient,_bodyPart,1)] call EFUNC(damage,getWrapTime));
         callbackSuccess = QUOTE([ARR_4(_medic,_patient,_bodyPart,1)] call EFUNC(damage,wrapBodypart));
     };
-    class ElasticWrapSplint: ElasticWrap {
-        displayName = ECSTRING(disability,ElasticWrap_Splint);
-        allowedSelections[] = {"LeftArm","RightArm","LeftLeg","RightLeg"};
-        condition = QEFUNC(disability,canWrapSplint);
-        treatmentTime = QEFUNC(disability,getSplintWrapTime);
-        callbackSuccess = QEFUNC(disability,wrapSplint);
-    };
 
     // Surgical Airway
     class StitchAirwayIncision: FieldDressing {
@@ -214,54 +207,6 @@ class ACEGVAR(medical_treatment,actions) {
     };
 
     // Disability
-    class InspectForFracture: CheckPulse {
-        displayName = ECSTRING(disability,InspectForFracture);
-        displayNameProgress = ECSTRING(disability,InspectForFracture_Progress);
-        icon = "";
-        medicRequired = QEGVAR(disability,allowInspectForFracture);
-        treatmentLocations = TREATMENT_LOCATIONS_ALL;
-        treatmentTime = 6;
-        allowedSelections[] = {"LeftArm","RightArm","LeftLeg","RightLeg"};
-        animationMedic = "";
-        condition = QEFUNC(disability,canInspectForFracture);
-        callbackSuccess = QEFUNC(disability,inspectForFracture);
-    };
-    class FractureRealignment: Splint {
-        displayName = ECSTRING(disability,FractureRealignment);
-        displayNameProgress = ECSTRING(disability,FractureRealignment_Progress);
-        icon = "";
-        medicRequired = QEGVAR(disability,allowFractureRealignment);
-        consumeItem = 0;
-        items[] = {};
-        treatmentLocations = TREATMENT_LOCATIONS_ALL;
-        treatmentTime = 3;
-        callbackSuccess = QEFUNC(disability,performFractureRealignment);
-        condition = QEFUNC(disability,canPerformFractureRealignment);
-        litter[] = {};
-        ACM_rollToBack = 1;
-        ACM_menuIcon = "";
-    };
-    class ApplySAMSplint: Splint {
-        displayName = ECSTRING(disability,ApplySAMSplint);
-        displayNameProgress = ECSTRING(disability,ApplySAMSplint_Progress);
-        items[] = {"ACM_SAMSplint"};
-        allowedSelections[] = {"LeftArm","RightArm","LeftLeg","RightLeg"};
-        condition = QEFUNC(disability,canApplySplint);
-        treatmentTime = QEGVAR(disability,treatmentTimeSAMSplint);
-        callbackSuccess = QEFUNC(disability,splint);
-        ACM_menuIcon = "ACM_SAMSplint";
-    };
-    class RemoveSAMSplint: Splint {
-        displayName = ECSTRING(disability,RemoveSAMSplint);
-        displayNameProgress = ECSTRING(disability,RemoveSAMSplint_Progress);
-        allowedSelections[] = {"LeftArm","RightArm","LeftLeg","RightLeg"};
-        items[] = {};
-        condition = QEFUNC(disability,canRemoveSplint);
-        treatmentTime = 3;
-        callbackSuccess = QEFUNC(disability,removeSplint);
-        litter[] = {};
-        ACM_menuIcon = "ACM_SAMSplint";
-    };
     class SurgicalKit: FieldDressing {
         ACM_menuIcon = "ACE_surgicalKit";
         callbackFailure = QUOTE([ARR_2(_medic,_patient)] call EFUNC(damage,surgicalKitCancel));
@@ -721,6 +666,24 @@ class ACEGVAR(medical_treatment,actions) {
     SYRINGE_ACTION_IV(Dimercaprol,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Dimercaprol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Dimercaprol)));
     SYRINGE_ACTION_IV(Dimercaprol,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Dimercaprol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Dimercaprol)));
 
+<<<<<<< HEAD
+    SYRINGE_ACTION_IV(Etomidate,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
+    SYRINGE_ACTION_IV(Etomidate,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
+    SYRINGE_ACTION_IV(Etomidate,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
+    SYRINGE_ACTION_IV(Etomidate,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
+
+    SYRINGE_ACTION_IV(Midazolam,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Midazolam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Midazolam)));
+    SYRINGE_ACTION_IV(Midazolam,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Midazolam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Midazolam)));
+    SYRINGE_ACTION_IV(Midazolam,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Midazolam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Midazolam)));
+    SYRINGE_ACTION_IV(Midazolam,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Midazolam,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Midazolam)));
+
+    SYRINGE_ACTION_IV(Flumazenil,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
+    SYRINGE_ACTION_IV(Flumazenil,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
+    SYRINGE_ACTION_IV(Flumazenil,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
+    SYRINGE_ACTION_IV(Flumazenil,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
+
+=======
+>>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
     // IM
     class Epinephrine_10_IM: Epinephrine_10_IV {
         displayName = __EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Epinephrine,Intramuscular));

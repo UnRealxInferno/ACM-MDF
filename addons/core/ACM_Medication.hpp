@@ -261,6 +261,32 @@ class ACM_Medication {
             weightEffect = 1;
         };
 
+        class Etomidate_IV: ACM_IV_Medication {
+            painReduce = 0.4;
+            hrIncrease[] = {-2, -5};
+            timeInSystem = 360;
+            timeTillMaxEffect = 5;
+            maxEffectTime = 240;
+            maxDose = 0;
+            weightEffect = 0;
+        };
+
+        class Midazolam_IV: ACM_IV_Medication {
+            painReduce = 0.2;
+            hrIncrease[] = {-2, -5};
+            timeInSystem = 360;
+            timeTillMaxEffect = 10;
+            maxDose = 8;
+            weightEffect = 1;
+        };
+
+        class Flumazenil_IV: ACM_IV_Medication {
+            timeInSystem = 60;
+            timeTillMaxEffect = 5;
+            maxDose = 3;
+            weightEffect = 0;
+        };
+
         class ACM_IM_Medication {
             painReduce = 0;
             timeInSystem = 400;
@@ -482,6 +508,21 @@ class ACM_Medication {
         class Ertapenem {
             classnames[] = {"Ertapenem_IV", "Ertapenem"};
         };
+<<<<<<< HEAD
+
+        class Etomidate {
+            classnames[] = {"Etomidate_IV"};
+        };
+
+        class Midazolam {
+            classnames[] = {"Midazolam_IV"};
+        };
+
+        class Flumazenil {
+            classnames[] = {"Flumazenil_IV"};
+        };
+=======
+>>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
     };
     class Concentration {
         class Naloxone {
@@ -573,5 +614,26 @@ class ACM_Medication {
             dose = "300mg/3ml";
             volume = 3;
         };
+<<<<<<< HEAD
+
+        class Etomidate {
+            concentration = 2;
+            dose = "20mg/10ml";
+            volume = 10;
+        };
+
+        class Midazolam {
+            concentration = 5;
+            dose = "5mg/2ml";
+            volume = 2;
+        };
+
+        class Flumazenil {
+            concentration = 0.1;
+            dose = "0.5mg/5ml";
+            volume = 5;
+        };
+=======
+>>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
     };
 };

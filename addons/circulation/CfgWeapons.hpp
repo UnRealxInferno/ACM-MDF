@@ -203,6 +203,33 @@ class CfgWeapons {
         ACM_isVial = 0;
     };
 
+    class ACM_Vial_Etomidate: ACM_Vial_Epinephrine {
+        picture = QPATHTOF(ui\vial_ketamine_ca.paa);
+        displayName = CSTRING(Vial_Etomidate);
+        descriptionShort = CSTRING(Vial_Etomidate_Desc);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 0.2;
+        };
+    };
+
+    class ACM_Vial_Midazolam: ACM_Vial_Epinephrine {
+        picture = QPATHTOF(ui\vial_morphine_ca.paa);
+        displayName = CSTRING(Vial_Midazolam);
+        descriptionShort = CSTRING(Vial_Midazolam_Desc);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 0.2;
+        };
+    };
+
+    class ACM_Vial_Flumazenil: ACM_Vial_Epinephrine {
+        picture = QPATHTOF(ui\vial_atropine_ca.paa);
+        displayName = CSTRING(Vial_Flumazenil);
+        descriptionShort = CSTRING(Vial_Flumazenil_Desc);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 0.2;
+        };
+    };
+
     class ACM_Ampule_Dimercaprol: ACM_Vial_Epinephrine {
         picture = QPATHTOF(ui\ampule_dimercaprol_ca.paa);
         displayName = CSTRING(Ampule_Dimercaprol);

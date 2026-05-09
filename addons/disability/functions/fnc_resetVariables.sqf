@@ -28,6 +28,8 @@ _patient setVariable [QGVAR(Fracture_Pain), [false,false,false,false,false,false
 _patient setVariable [QGVAR(Fracture_ReFracture), [false,false,false,false,false,false], true];
 _patient setVariable [QGVAR(Fracture_NoEffect), [false,false,false,false,false,false], true];
 
+_patient setVariable ["ACM_surgery_fractures", [0,0,0,0,0,0], true];
+
 _patient setVariable [VAR_TOURNIQUET_NECROSIS, DEFAULT_TOURNIQUET_NECROSIS];
 _patient setVariable [VAR_TOURNIQUET_NECROSIS_T, DEFAULT_TOURNIQUET_NECROSIS];
 _patient setVariable [QGVAR(TourniquetEffects_PFH), -1];
