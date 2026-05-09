@@ -508,7 +508,6 @@ class ACM_Medication {
         class Ertapenem {
             classnames[] = {"Ertapenem_IV", "Ertapenem"};
         };
-<<<<<<< HEAD
 
         class Etomidate {
             classnames[] = {"Etomidate_IV"};
@@ -521,8 +520,6 @@ class ACM_Medication {
         class Flumazenil {
             classnames[] = {"Flumazenil_IV"};
         };
-=======
->>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
     };
     class Concentration {
         class Naloxone {
@@ -614,7 +611,6 @@ class ACM_Medication {
             dose = "300mg/3ml";
             volume = 3;
         };
-<<<<<<< HEAD
 
         class Etomidate {
             concentration = 2;
@@ -633,7 +629,5 @@ class ACM_Medication {
             dose = "0.5mg/5ml";
             volume = 5;
         };
-=======
->>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
     };
 };

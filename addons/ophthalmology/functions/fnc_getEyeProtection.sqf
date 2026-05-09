@@ -24,17 +24,4 @@ if (isNumber (_config >> "ACE_Resistance")) exitWith {
     (getNumber (_config >> "ACE_Resistance")) min 1 max 0
 };
 
-private _gogglesLower = toLowerANSI _goggles;
-
-if (
-    ((_gogglesLower find "combat") != -1) ||
-    {(_gogglesLower find "goggle") != -1} ||
-    {(_gogglesLower find "tactical") != -1} ||
-    {(_gogglesLower find "lowprofile") != -1} ||
-    {(_gogglesLower find "respirator") != -1} ||
-    {(_gogglesLower find "gasmask") != -1}
-) exitWith {
-    0.75
-};
-
 0

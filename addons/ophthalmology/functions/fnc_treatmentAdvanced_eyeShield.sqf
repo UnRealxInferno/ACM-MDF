@@ -19,33 +19,36 @@ private _eyeInjuries = _patient getVariable [QGVAR(eyeInjuries), [1, 1]];
 #define IDC_LEFT_EYE_CONTROL 17103
 #define IDC_RIGHT_EYE_CONTROL 17102
 
-"ACM_EyeShield" cutRsc ["ACM_EyeShield", "PLAIN", 0, true];
-
-
 private _fnc_applyEyeCover = {
     params ["_patient", "_shieldItem", "_eyeDisplay", "_eyeIndex"];
 
-    // If patient has NVGs on, move them to the patient's inventory
-    if (hmd _patient != "") then {
-        _patient addItem (hmd _patient);
+    // If patient has NVGs on, unlink and move them to the patient's inventory
+    private _existingHmd = hmd _patient;
+    if (_existingHmd != "") then {
+        _patient unlinkItem _existingHmd;
+        _patient addItem _existingHmd;
     };
 
-    private _display = uiNamespace getVariable ["ACM_EyeShield", displayNull];
-    private _activeEye = _display displayCtrl _eyeDisplay;
-
     _patient linkItem _shieldItem;
-    
-    _activeEye ctrlShow true;
-    _activeEye ctrlCommit 0;
+
+    if (local _patient) then {
+        [_eyeDisplay] call FUNC(showEyeShieldOverlay);
+    } else {
+        [_eyeDisplay] remoteExec [QFUNC(showEyeShieldOverlay), _patient];
+    };
 
     // Approximately 8 minutes to fully re-heal a damaged eye using the eyeshield
     [{
         params ["_args", "_pfhID"];
-        _args params ["_patient", "_activeEye", "_shieldItem", "_eyeIndex"];
-    
+        _args params ["_patient", "_eyeDisplay", "_shieldItem", "_eyeIndex"];
+
         if ((hmd _patient) != _shieldItem) exitWith {
             _pfhID call CBA_fnc_removePerFrameHandler;
-            "ACM_EyeShield" cutText ["","PLAIN",0,true];
+            if (local _patient) then {
+                [] call FUNC(hideEyeShieldOverlay);
+            } else {
+                [] remoteExec [QFUNC(hideEyeShieldOverlay), _patient];
+            };
         };
     
         private _eyeInjury = _patient getVariable [QGVAR(eyeInjuries), [1, 1]];
@@ -57,7 +60,7 @@ private _fnc_applyEyeCover = {
         };
     }, 1, [
         _patient,
-        _activeEye,
+        _eyeDisplay,
         _shieldItem,
         _eyeIndex
     ]] call CBA_fnc_addPerFrameHandler;

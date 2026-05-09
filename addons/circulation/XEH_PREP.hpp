@@ -66,11 +66,8 @@ PREP(handleMed_AmmoniaInhalantLocal);
 PREP(handleMed_AtropineLocal);
 PREP(handleMed_CalciumChlorideLocal);
 PREP(handleMed_DimercaprolLocal);
-<<<<<<< HEAD
 PREP(handleMed_FlumazenilLocal);
 PREP(handleMed_MidazolamLocal);
-=======
->>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
 PREP(handleMed_NaloxoneLocal);
 PREP(handleMed_TXALocal);
 PREP(handleOverdose);

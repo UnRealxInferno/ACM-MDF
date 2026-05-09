@@ -666,7 +666,6 @@ class ACEGVAR(medical_treatment,actions) {
     SYRINGE_ACTION_IV(Dimercaprol,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Dimercaprol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Dimercaprol)));
     SYRINGE_ACTION_IV(Dimercaprol,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Dimercaprol,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Dimercaprol)));
 
-<<<<<<< HEAD
     SYRINGE_ACTION_IV(Etomidate,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
     SYRINGE_ACTION_IV(Etomidate,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
     SYRINGE_ACTION_IV(Etomidate,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Etomidate,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Etomidate)));
@@ -682,8 +681,6 @@ class ACEGVAR(medical_treatment,actions) {
     SYRINGE_ACTION_IV(Flumazenil,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
     SYRINGE_ACTION_IV(Flumazenil,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Flumazenil,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Flumazenil)));
 
-=======
->>>>>>> bfaa9855022626e2ddf63a89a07df2e49d3248a9
     // IM
     class Epinephrine_10_IM: Epinephrine_10_IV {
         displayName = __EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Epinephrine,Intramuscular));
