@@ -1626,6 +1626,21 @@
                 <Spanish>Combatir dolor leve a moderado</Spanish>
                 <Turkish>Hafif-orta şiddette ağrı ile mücadele etmek için kullanılır</Turkish>
             </Key>
+            <Key ID="STR_ACM_Circulation_Cocodamol">
+                <English>Co-codamol 15/500</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Cocodamol_SinglePack">
+                <English>Co-codamol 15/500 (Single Pack)</English>
+            </Key>
+<Key ID="STR_ACM_Circulation_Cocodamol_Desc">
+                <English>Mild opioid analgesic for moderate pain. Contains codeine; may cause respiratory depression.</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_UseCocodamol">
+                <English>Use Co-codamol 15/500</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_UseCocodamol_Progress">
+                <English>Using Co-codamol 15/500...</English>
+            </Key>
             <Key ID="STR_ACM_Circulation_AmmoniaInhalant">
                 <English>Ammonia Inhalant</English>
                 <Polish>Amoniak wziewny</Polish>

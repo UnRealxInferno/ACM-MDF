@@ -78,6 +78,7 @@ class CfgVehicles {
         displayName = CSTRING(MedicalSupplyCrate_Advanced_Display);
         class TransportMagazines {
             ADDMAGAZINE(ACM_Paracetamol,8);
+            ADDMAGAZINE(ACM_Cocodamol,4);
             ADDMAGAZINE(ACM_AmmoniaInhalant,8);
             ADDMAGAZINE(ACM_Inhaler_Penthrox,8);
             ADDMAGAZINE(ACM_OxygenTank_425,2);

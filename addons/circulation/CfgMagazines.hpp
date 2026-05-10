@@ -39,6 +39,14 @@ class CfgMagazines {
         mass = 0.06;
     };
 
+    class ACM_Cocodamol: ACM_Paracetamol {
+        picture = QPATHTOF(ui\paracetamol_ca.paa);
+        displayName = CSTRING(Cocodamol);
+        descriptionShort = CSTRING(Cocodamol_Desc);
+        count = 10;
+        mass = 0.3;
+    };
+
     class ACM_AmmoniaInhalant: ACM_Paracetamol {
         picture = QPATHTOF(ui\inhalant_ammonia_ca.paa);
         displayName = CSTRING(AmmoniaInhalant);

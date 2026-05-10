@@ -46,7 +46,7 @@ class CfgWeapons {
         displayName = CSTRING(ACCUVAC);
         descriptionShort = CSTRING(ACCUVAC_Desc);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 20;
+            mass = 80;
         };
     };
 

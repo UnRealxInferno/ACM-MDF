@@ -21,11 +21,8 @@
 
 params ["_unit", "_altitudeAdjustment", "_bloodVolume", "_deltaT", "_syncValue"];
 
-private _positionTemperature = GVAR(positionTemperature);
-_positionTemperature params ["_latitude", "_projectedTemperature"];
-
 private _bloodVolumeSafe = _bloodVolume max 0.1;
-private _mapTemperature = _projectedTemperature - ((linearConversion [0, 90, _latitude, 15, 5, true]) * (linearConversion [0, 1, sunOrMoon, 1, 0, true]));
+private _mapTemperature = missionNamespace getVariable ["ace_weather_currentTemperature", 15];
 private _warmingImpact = (_unit getVariable [QGVAR(warmingImpact), 0]) / 1000;
 private _pointTemperature = linearConversion [0, 40, (-3.5 * (0.95 ^ _mapTemperature + _altitudeAdjustment)), 12, -9, true];
 private _initialBodyTemperature = 37 min (((-0.3392 * (_bloodVolumeSafe ^ 2)) + (6.00357 * _bloodVolumeSafe) + 13.3));

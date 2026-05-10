@@ -10,7 +10,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(AED_Desc);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 40;
+            mass = 100;
         };
     };
 
@@ -242,6 +242,16 @@ class CfgWeapons {
         picture = QPATHTOF(ui\paracetamol_singlepack_ca.paa);
         displayName = CSTRING(Paracetamol_SinglePack);
         descriptionShort = CSTRING(Paracetamol_Desc);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 0.03;
+        };
+    };
+
+    class ACM_Cocodamol_SinglePack: ACM_Spray_Naloxone {
+        scope = 1;
+        picture = QPATHTOF(ui\paracetamol_singlepack_ca.paa);
+        displayName = CSTRING(Cocodamol_SinglePack);
+        descriptionShort = CSTRING(Cocodamol_Desc);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0.03;
         };
