@@ -2,16 +2,16 @@
 <Project name="ACM">
     <Package name="Circulation">
         <Key ID="STR_ACM_Circulation_Category">
-            <English>ACM: Circulation</English>
-            <Polish>ACM: Krążenie</Polish>
-            <French>ACM : Circulation</French>
-            <German>ACM: Kreislauf</German>
-            <Portuguese>ACM: Circulação</Portuguese>
-            <Russian>ACM: Кровообращение</Russian>
-            <Ukrainian>ACM: Кровообіг</Ukrainian>
-            <Korean>ACM: 순환 (Circulation)</Korean>
-            <Spanish>ACM: Circulación</Spanish>
-            <Turkish>ACM: Dolaşım</Turkish>
+            <English>MedMash - Circulation</English>
+            <Polish>MedMash - Circulation</Polish>
+            <French>MedMash - Circulation</French>
+            <German>MedMash - Circulation</German>
+            <Portuguese>MedMash - Circulation</Portuguese>
+            <Russian>MedMash - Circulation</Russian>
+            <Ukrainian>MedMash - Circulation</Ukrainian>
+            <Korean>MedMash - Circulation</Korean>
+            <Spanish>MedMash - Circulation</Spanish>
+            <Turkish>MedMash - Circulation</Turkish>
         </Key>
         <Key ID="STR_ACM_Circulation_Category_Coagulation">
             <English>Coagulation</English>

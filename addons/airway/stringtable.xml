@@ -2,16 +2,16 @@
 <Project name="ACM">
     <Package name="Airway">
         <Key ID="STR_ACM_Airway_Category">
-            <English>ACM: Airway</English>
-            <Polish>ACM: Drogi oddechowe</Polish>
-            <French>ACM : Voies respiratoires</French>
-            <German>ACM: Atemweg</German>
-            <Portuguese>ACM: Vias aéreas</Portuguese>
-            <Russian>ACM: Дыхательные пути</Russian>
-            <Ukrainian>ACM: Дихальні шляхи</Ukrainian>
-            <Korean>ACM: Airway</Korean>
-            <Spanish>ACM: Vías aéreas</Spanish>
-            <Turkish>ACM: Hava Yolu</Turkish>
+            <English>MedMash - Airway</English>
+            <Polish>MedMash - Airway</Polish>
+            <French>MedMash - Airway</French>
+            <German>MedMash - Airway</German>
+            <Portuguese>MedMash - Airway</Portuguese>
+            <Russian>MedMash - Airway</Russian>
+            <Ukrainian>MedMash - Airway</Ukrainian>
+            <Korean>MedMash - Airway</Korean>
+            <Spanish>MedMash - Airway</Spanish>
+            <Turkish>MedMash - Airway</Turkish>
         </Key>
         <Key ID="STR_ACM_Airway_Category_AirwayManagement">
             <English>Airway Management</English>

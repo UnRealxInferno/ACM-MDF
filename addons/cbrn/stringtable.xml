@@ -2,15 +2,15 @@
 <Project name="ACM">
     <Package name="CBRN">
         <Key ID="STR_ACM_CBRN_Category">
-            <English>ACM: CBRN</English>
-            <Portuguese>ACM: QBRN</Portuguese>
-            <Russian>ACM: ХБРЯ</Russian>
-            <Ukrainian>ACM: ХБРЯ</Ukrainian>
-            <Korean>ACM: CBRN</Korean>
-            <Spanish>ACM: CBRN</Spanish>
-            <Turkish>ACM: CBRN</Turkish>
-            <French>ACM : NRBC</French>
-            <Polish>ACM: CBRN</Polish>
+            <English>MedMash - CBRN</English>
+            <Portuguese>MedMash - CBRN</Portuguese>
+            <Russian>MedMash - CBRN</Russian>
+            <Ukrainian>MedMash - CBRN</Ukrainian>
+            <Korean>MedMash - CBRN</Korean>
+            <Spanish>MedMash - CBRN</Spanish>
+            <Turkish>MedMash - CBRN</Turkish>
+            <French>MedMash - CBRN</French>
+            <Polish>MedMash - CBRN</Polish>
         </Key>
         <Key ID="STR_ACM_CBRN_Category_Autoinjectors">
             <English>Autoinjectors</English>

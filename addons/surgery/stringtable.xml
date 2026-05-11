@@ -2,7 +2,7 @@
 <Project name="ACM">
     <Package name="Surgery">
         <Key ID="STR_ACM_surgery_cba_name">
-            <English>ACM Surgery</English>
+            <English>MedMash - Surgery</English>
         </Key>
         <Key ID="STR_ACM_surgery_SubCategory_Fractures">
             <English>Fractures</English>

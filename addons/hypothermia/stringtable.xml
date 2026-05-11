@@ -362,14 +362,14 @@
             <Dutch>Wordt gebruikt</Dutch>
         </Key>
         <Key ID="STR_ACM_Hypothermia_cba_name">
-            <English>ACM: Hypothermia</English>
-            <French>ACM: Hypothermie</French>
-            <Spanish>ACM: Hipotermia</Spanish>
-            <Italian>ACM: Ipotermia</Italian>
-            <German>ACM: Hypothermie</German>
-            <Japanese>ACM - Hypothermia</Japanese>
-            <Dutch>ACM: Hypothermie</Dutch>
-            <Turkish>ACM: Hipotermi</Turkish>
+            <English>MedMash - Hypothermia</English>
+            <French>MedMash - Hypothermia</French>
+            <Spanish>MedMash - Hypothermia</Spanish>
+            <Italian>MedMash - Hypothermia</Italian>
+            <German>MedMash - Hypothermia</German>
+            <Japanese>MedMash - Hypothermia</Japanese>
+            <Dutch>MedMash - Hypothermia</Dutch>
+            <Turkish>MedMash - Hypothermia</Turkish>
         </Key>
         <Key ID="STR_ACM_Hypothermia_perform">
             <English>Performing</English>

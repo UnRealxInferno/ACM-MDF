@@ -52,14 +52,14 @@
             <Turkish>Göz Kırpma</Turkish>
         </Key>
         <Key ID="STR_ACM_Ophthalmology_cba_name">
-            <English>ACM: Ophthalmology</English>
-            <French>ACM : Ophtalmologie</French>
-            <Spanish>ACM: Oftalmología</Spanish>
-            <Italian>ACM: Oftalmologia</Italian>
-            <German>ACM: Augenheilkunde</German>
-            <Japanese>ACM - 眼科 (Ophthalmology)</Japanese>
-            <Dutch>ACM: Oogheelkunde</Dutch>
-            <Turkish>ACM: Oftalmoloji</Turkish>
+            <English>MedMash - Ophthalmology</English>
+            <French>MedMash - Ophthalmology</French>
+            <Spanish>MedMash - Ophthalmology</Spanish>
+            <Italian>MedMash - Ophthalmology</Italian>
+            <German>MedMash - Ophthalmology</German>
+            <Japanese>MedMash - Ophthalmology</Japanese>
+            <Dutch>MedMash - Ophthalmology</Dutch>
+            <Turkish>MedMash - Ophthalmology</Turkish>
         </Key>
         <Key ID="STR_ACM_Ophthalmology_eyeInjuryPresent">
             <English>Eye Injury</English>

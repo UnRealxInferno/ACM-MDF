@@ -2,16 +2,16 @@
 <Project name="ACM">
     <Package name="Breathing">
         <Key ID="STR_ACM_Breathing_Category">
-            <English>ACM: Breathing</English>
-            <Polish>ACM: Oddychanie</Polish>
-            <French>ACM : Respiration</French>
-            <German>ACM: Beatmung/Belüftung</German>
-            <Portuguese>ACM: Respiração</Portuguese>
-            <Russian>ACM: Дыхание</Russian>
-            <Ukrainian>ACM: Дихання</Ukrainian>
-            <Korean>ACM: 호흡 (Breathing)</Korean>
-            <Spanish>ACM: Respiración</Spanish>
-            <Turkish>ACM:Solunum</Turkish>
+            <English>MedMash - Breathing</English>
+            <Polish>MedMash - Breathing</Polish>
+            <French>MedMash - Breathing</French>
+            <German>MedMash - Breathing</German>
+            <Portuguese>MedMash - Breathing</Portuguese>
+            <Russian>MedMash - Breathing</Russian>
+            <Ukrainian>MedMash - Breathing</Ukrainian>
+            <Korean>MedMash - Breathing</Korean>
+            <Spanish>MedMash - Breathing</Spanish>
+            <Turkish>MedMash - Breathing</Turkish>
         </Key>
         <Key ID="STR_ACM_Breathing_Category_Pneumothorax">
             <English>Pneumothorax</English>

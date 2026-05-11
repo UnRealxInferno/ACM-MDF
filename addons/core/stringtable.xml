@@ -2,16 +2,16 @@
 <Project name="ACM">
     <Package name="Core">
         <Key ID="STR_ACM_Core_Category">
-            <English>ACM: Core</English>
-            <Polish>ACM: Core</Polish>
-            <French>ACM: Core</French>
-            <German>ACM: Kern</German>
-            <Portuguese>ACM: Núcleo</Portuguese>
-            <Russian>ACM: Основной модуль</Russian>
-            <Ukrainian>ACM: Основний модуль</Ukrainian>
-            <Korean>ACM: 코어</Korean>
-            <Spanish>ACM: Core</Spanish>
-            <Turkish>ACM: Core</Turkish>
+            <English>MedMash - Core</English>
+            <Polish>MedMash - Core</Polish>
+            <French>MedMash - Core</French>
+            <German>MedMash - Core</German>
+            <Portuguese>MedMash - Core</Portuguese>
+            <Russian>MedMash - Core</Russian>
+            <Ukrainian>MedMash - Core</Ukrainian>
+            <Korean>MedMash - Core</Korean>
+            <Spanish>MedMash - Core</Spanish>
+            <Turkish>MedMash - Core</Turkish>
         </Key>
         <Key ID="STR_ACM_Core_Category_Items">
             <English>Items</English>

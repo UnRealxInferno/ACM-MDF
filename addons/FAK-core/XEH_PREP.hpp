@@ -1,0 +1,9 @@
+PREP(FAK_ammoToArray);
+PREP(FAK_arrayToAmmo);
+PREP(FAK_checkRepack);
+PREP(FAK_checkSlot);
+PREP(FAK_displayContent);
+PREP(FAK_repack);
+PREP(FAK_unpack);
+PREP(FAK_updateContents);
+PREP(getMagazineAmmoCounts);

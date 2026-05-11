@@ -2,16 +2,16 @@
 <Project name="ACM">
     <Package name="Disability">
         <Key ID="STR_ACM_Disability_Category">
-            <English>ACM: Disability</English>
-            <Polish>ACM: Ograniczenia ruchowe</Polish>
-            <French>ACM : Restrictions de mouvement</French>
-            <German>ACM: Defizite</German>
-            <Portuguese>ACM: Deficiência</Portuguese>
-            <Russian>ACM: Травмы</Russian>
-            <Ukrainian>ACM: Травми</Ukrainian>
-            <Korean>ACM: 장애 (Disability)</Korean>
-            <Spanish>ACM: Discapacidad</Spanish>
-            <Turkish>ACM: Sakatlık</Turkish>
+            <English>MedMash - Disability</English>
+            <Polish>MedMash - Disability</Polish>
+            <French>MedMash - Disability</French>
+            <German>MedMash - Disability</German>
+            <Portuguese>MedMash - Disability</Portuguese>
+            <Russian>MedMash - Disability</Russian>
+            <Ukrainian>MedMash - Disability</Ukrainian>
+            <Korean>MedMash - Disability</Korean>
+            <Spanish>MedMash - Disability</Spanish>
+            <Turkish>MedMash - Disability</Turkish>
         </Key>
         <Key ID="STR_ACM_Disability_Category_FractureManagement">
             <English>Fracture Management</English>

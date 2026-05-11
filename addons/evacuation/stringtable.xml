@@ -2,16 +2,16 @@
 <Project name="ACM">
     <Package name="Evacuation">
         <Key ID="STR_ACM_Evacuation_Category">
-            <English>ACM: Evacuation</English>
-            <Polish>ACM: Ewakuacja</Polish>
-            <French>ACM : Evacuation</French>
-            <German>ACM: Evakuierung</German>
-            <Portuguese>ACM: Evacuação</Portuguese>
-            <Russian>ACM: Эвакуация</Russian>
-            <Ukrainian>ACM: Евакуація</Ukrainian>
-            <Korean>ACM: 퇴출</Korean>
-            <Spanish>ACM: Evacuación</Spanish>
-            <Turkish>ACM: Tahliye</Turkish>
+            <English>MedMash - Evacuation</English>
+            <Polish>MedMash - Evacuation</Polish>
+            <French>MedMash - Evacuation</French>
+            <German>MedMash - Evacuation</German>
+            <Portuguese>MedMash - Evacuation</Portuguese>
+            <Russian>MedMash - Evacuation</Russian>
+            <Ukrainian>MedMash - Evacuation</Ukrainian>
+            <Korean>MedMash - Evacuation</Korean>
+            <Spanish>MedMash - Evacuation</Spanish>
+            <Turkish>MedMash - Evacuation</Turkish>
         </Key>
         <Key ID="STR_ACM_Evacuation_Category_Tickets">
             <English>Tickets</English>

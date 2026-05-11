@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="efak">
+    <Package name="main">
+        <Key ID="STR_efak_main_URL">
+            <English>https://discord.gg/Jud6gyzFYx</English>
+            <German>https://discord.gg/Jud6gyzFYx</German>
+        </Key>
+    </Package>
+</Project>

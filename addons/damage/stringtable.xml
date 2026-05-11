@@ -2,16 +2,16 @@
 <Project name="ACM">
     <Package name="Damage">
         <Key ID="STR_ACM_Damage_Category">
-            <English>ACM: Damage</English>
-            <Polish>ACM: Obrażenia</Polish>
-            <German>ACM: Schaden</German>
-            <French>ACM : Dommages</French>
-            <Portuguese>ACM: Dano</Portuguese>
-            <Russian>ACM: Повреждения</Russian>
-            <Ukrainian>ACM: Ураження</Ukrainian>
-            <Korean>ACM: 데미지</Korean>
-            <Spanish>ACM: Daño</Spanish>
-            <Turkish>ACM: Yaralanma</Turkish>
+            <English>MedMash - Damage</English>
+            <Polish>MedMash - Damage</Polish>
+            <German>MedMash - Damage</German>
+            <French>MedMash - Damage</French>
+            <Portuguese>MedMash - Damage</Portuguese>
+            <Russian>MedMash - Damage</Russian>
+            <Ukrainian>MedMash - Damage</Ukrainian>
+            <Korean>MedMash - Damage</Korean>
+            <Spanish>MedMash - Damage</Spanish>
+            <Turkish>MedMash - Damage</Turkish>
         </Key>
         <Key ID="STR_ACM_Damage_Category_Thresholds">
             <English>Thresholds</English>
