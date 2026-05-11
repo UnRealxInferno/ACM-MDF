@@ -26,6 +26,7 @@ private _ketamineIV = 0;
 private _amiodaroneIV = 0;
 private _lidocaine = 0;
 private _lidocaineIV = 0;
+private _paracetamol = 0;
 
 private _ondansetron = 0;
 private _ondansetronIV = 0;
@@ -34,7 +35,7 @@ private _ondansetronIV = 0;
 {
     _x params ["_medication", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "", "", "", "_administrationType", "_maxEffectTime", "", "", "", "_concentration"];
 
-    if !(_medication in ["Morphine","Morphine_IV","Fentanyl","Fentanyl_IV","Ketamine","Ketamine_IV","Amiodarone_IV","Lidocaine","Lidocaine_IV","Ondansetron","Ondansetron_IV"]) then {
+    if !(_medication in ["Morphine","Morphine_IV","Fentanyl","Fentanyl_IV","Ketamine","Ketamine_IV","Amiodarone_IV","Lidocaine","Lidocaine_IV","Paracetamol","Ondansetron","Ondansetron_IV"]) then {
         continue;
     };
 
@@ -70,6 +71,9 @@ private _ondansetronIV = 0;
         case "Lidocaine_IV": {
             _lidocaineIV = _lidocaineIV + _getEffect;
         };
+        case "Paracetamol": {
+            _paracetamol = _paracetamol + _getEffect;
+        };
         case "Ondansetron": {
             _ondansetron = _ondansetron + _getEffect;
         };
@@ -93,11 +97,14 @@ _lidocaine = (linearConversion [0.4, 1, (_lidocaine * 0.5), 0, 1]) max 0;
 
 _amiodaroneIV = (linearConversion [0.5, 1, _amiodaroneIV, 0, 1]) max 0;
 
+// Nausea only kicks in above 3 doses; scales up to 0.6 at 6+ doses
+_paracetamol = (linearConversion [3, 6, _paracetamol, 0, 0.6, true]) max 0;
+
 _ondansetronIV = (linearConversion [0.5, 1, _ondansetronIV, 0, 0.9, true]) max 0;
 _ondansetron = (linearConversion [0.5, 1, (_ondansetron * 0.6), 0, 0.5, true]) max 0;
 
 private _ondansetronSuppression = [(_ondansetronIV + _ondansetron), ((_ondansetronIV + _ondansetron) * 0.5)] select ((([_patient, "Ondansetron_IV", false] call ACEFUNC(medical_status,getMedicationCount)) + (([_patient, "Ondansetron", false] call ACEFUNC(medical_status,getMedicationCount)) * 0.5)) > 2);
 
-private _medicationNausea = 1.2 min ((1 min (_morphineIV + _morphine)) + (1 min (_fentanylIV + _fentanyl)) + (1 min (_ketamineIV + _ketamine)) + (1 min (_lidocaineIV + _lidocaine)) + _amiodaroneIV);
+private _medicationNausea = 1.2 min ((1 min (_morphineIV + _morphine)) + (1 min (_fentanylIV + _fentanyl)) + (1 min (_ketamineIV + _ketamine)) + (1 min (_lidocaineIV + _lidocaine)) + _amiodaroneIV + _paracetamol);
 
 _medicationNausea - _ondansetronSuppression;

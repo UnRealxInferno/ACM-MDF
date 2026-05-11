@@ -797,7 +797,7 @@ class ACEGVAR(medical_treatment,actions) {
         treatmentTime = 3;
         allowedSelections[] = {"Head"};
         allowSelfTreatment = 1;
-        items[] = {"ACE_WaterBottle","ACE_WaterBottle_Half","ACE_Canteen","ACE_Canteen_Half"};
+        items[] = {"ACE_WaterBottle","ACE_WaterBottle_Half","ACE_Canteen","ACE_Canteen_Half","KAT_Eyewasher"};
         consumeItem = 1;
         condition = QUOTE(_patient call EFUNC(CBRN,canWashEyes));
         callbackSuccess = QUOTE([ARR_3(_medic,_patient,_usedItem)] call EFUNC(CBRN,washEyes));

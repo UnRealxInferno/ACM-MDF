@@ -1,0 +1,26 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "z\\DD1380\\addons\\main"
+        },
+        {
+            "name": "hemtt",
+            "value": "1.18.1"
+        },
+        {
+            "name": "version",
+            "value": "1.0.2.152"
+        },
+        {
+            "name": "git",
+            "value": "b67f50c80c6e237cef6b0b1fc38b55d8955cc9b8"
+        }
+    ]
+}

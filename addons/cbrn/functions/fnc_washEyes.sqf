@@ -20,7 +20,7 @@
 
 params ["_medic", "_patient", ["_usedItem", ""], ["_sourceObject", objNull]];
 
-if (_usedItem != "") then {
+if (_usedItem in ["ACE_WaterBottle","ACE_WaterBottle_Half","ACE_Canteen","ACE_Canteen_Half"]) then {
     private _item = switch (_usedItem) do {
         case "ACE_WaterBottle": {"ACE_WaterBottle_Half"};
         case "ACE_WaterBottle_Half": {"ACE_WaterBottle_Empty"};

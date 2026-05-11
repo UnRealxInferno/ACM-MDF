@@ -69,6 +69,7 @@ PREP(handleMed_DimercaprolLocal);
 PREP(handleMed_FlumazenilLocal);
 PREP(handleMed_MidazolamLocal);
 PREP(handleMed_NaloxoneLocal);
+PREP(handleMed_ParacetamolLocal);
 PREP(handleMed_TXALocal);
 PREP(handleOverdose);
 PREP(handleReversibleCardiacArrest);
