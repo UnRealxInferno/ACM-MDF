@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#define CBA_SETTINGS_EFAK "Enhanced First Aid Kits"
+#define CBA_SETTINGS_EFAK "MedMash - First Aid Kits"
 
 // Remove IFAK when empty
 [
