@@ -26,7 +26,10 @@ private _isBleeding = false;
     };
 } forEach ((GET_OPEN_WOUNDS(_patient)) getOrDefault [_bodyPart, []]);
 
-if (!_isBleeding && (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) isEqualTo []) exitWith {false};
+if (!_isBleeding
+    && (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) isEqualTo []
+    && (GET_CLOTTED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) isEqualTo []
+    && (GET_WRAPPED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) isEqualTo []) exitWith {false};
 
 if (_totalTime - _elapsedTime > ([_patient, _patient, _bodyPart] call FUNC(getNPWTTime)) - GVAR(npwtTime)) exitWith {true};
 
@@ -34,13 +37,32 @@ if (_isBleeding) then {
     [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "Dressing"], _patient] call CBA_fnc_targetEvent;
 };
 
-private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
-private _bandagedWoundsOnPart = _bandagedWounds get _bodyPart;
+private _stitchWoundsOnPart = [];
+private _stitchWounds = createHashMap;
+private _stitchVar = VAR_BANDAGED_WOUNDS;
+private _foundSource = false;
 
-if (_bandagedWoundsOnPart isEqualTo []) exitWith {false};
+{
+    _x params ["_srcWounds", "_srcVar"];
+    private _srcOnPart = _srcWounds getOrDefault [_bodyPart, []];
+    if (_srcOnPart isNotEqualTo []) exitWith {
+        _stitchWoundsOnPart = _srcOnPart;
+        _stitchWounds = _srcWounds;
+        _stitchVar = _srcVar;
+        _foundSource = true;
+    };
+} forEach [
+    [GET_BANDAGED_WOUNDS(_patient), VAR_BANDAGED_WOUNDS],
+    [GET_CLOTTED_WOUNDS(_patient), VAR_CLOTTED_WOUNDS],
+    [GET_WRAPPED_WOUNDS(_patient), VAR_WRAPPED_WOUNDS]
+];
 
-private _treatedWound = _bandagedWoundsOnPart deleteAt (count _bandagedWoundsOnPart - 1);
+if (!_foundSource) exitWith {false};
+
+private _treatedWound = _stitchWoundsOnPart deleteAt (count _stitchWoundsOnPart - 1);
 _treatedWound params ["_treatedID", "_treatedAmountOf", "", "_treatedDamageOf"];
+
+_stitchWounds set [_bodyPart, _stitchWoundsOnPart];
 
 private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
 private _stitchedWoundsOnPart = _stitchedWounds getOrDefault [_bodyPart, [], true];
@@ -57,7 +79,7 @@ if (_woundIndex == -1) then {
     _wound set [1, (_wound select 1) + _treatedAmountOf];
 };
 
-_patient setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
+_patient setVariable [_stitchVar, _stitchWounds, true];
 _patient setVariable [VAR_STITCHED_WOUNDS, _stitchedWounds, true];
 
 private _partIndex = ALL_BODY_PARTS find _bodyPart;

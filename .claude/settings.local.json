@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(findstr /S \"startCarryPFH\" addons\\\\core\\\\*.sqf addons\\\\core\\\\*\\\\*.sqf)",
+      "Bash(xargs grep -l \"startCarryPFH\")"
+    ]
+  }
+}

@@ -28,5 +28,7 @@ private _woundCount = 0;
 if (_woundCount > 0) then {
     _woundCount * GVAR(npwtTime)
 } else {
-    count (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) * GVAR(npwtTime)
+    (count (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []])
+    + count (GET_CLOTTED_WOUNDS(_patient) getOrDefault [_bodyPart, []])
+    + count (GET_WRAPPED_WOUNDS(_patient) getOrDefault [_bodyPart, []])) * GVAR(npwtTime)
 };

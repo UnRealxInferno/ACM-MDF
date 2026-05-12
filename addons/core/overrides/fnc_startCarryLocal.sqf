@@ -65,8 +65,8 @@ if (_target isKindOf "CAManBase") then {
     if (_target getVariable [QGVAR(CarryAssist_State), false] || _skip) then {
         _timer = CBA_missionTime + ([1, 0.25] select _skip);
     } else {
-        [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2] call ACEFUNC(common,doAnimation);
-        [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2] call ACEFUNC(common,doAnimation);
+        [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 1] call ACEFUNC(common,doAnimation);
+        [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 1] call ACEFUNC(common,doAnimation);
 
         _timer = CBA_missionTime + 10;
     };

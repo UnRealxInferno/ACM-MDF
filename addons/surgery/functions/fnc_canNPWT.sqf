@@ -30,4 +30,7 @@ if (_openWounds isNotEqualTo []) then {
     } forEach _openWounds;
 };
 
-(_isBleeding || (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []] isNotEqualTo []));
+(_isBleeding
+    || (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []] isNotEqualTo [])
+    || (GET_CLOTTED_WOUNDS(_patient) getOrDefault [_bodyPart, []] isNotEqualTo [])
+    || (GET_WRAPPED_WOUNDS(_patient) getOrDefault [_bodyPart, []] isNotEqualTo []));
