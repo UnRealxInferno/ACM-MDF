@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(findstr /S \"startCarryPFH\" addons\\\\core\\\\*.sqf addons\\\\core\\\\*\\\\*.sqf)",
-      "Bash(xargs grep -l \"startCarryPFH\")"
+      "Bash(xargs grep -l \"startCarryPFH\")",
+      "Bash(xargs grep -l \"PocketBVM.*ChestTubeKit\\\\|ChestTubeKit.*PocketBVM\")",
+      "Bash(xargs ls -la)",
+      "Bash(dir \"c:\\\\Users\\\\Inferno\\\\Documents\\\\GitHub\\\\ACM-MDF\\\\addons\" /b)",
+      "Bash(xargs grep -l \"ACM_ChestSeal\\\\|ACM_PocketBVM\")"
     ]
   }
 }
