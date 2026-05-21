@@ -6,4 +6,4 @@ hemtt.exe
 
 *.bat
 *.exe
-*.claude
+.claude
