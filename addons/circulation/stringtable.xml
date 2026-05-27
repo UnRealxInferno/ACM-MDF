@@ -1641,6 +1641,21 @@
             <Key ID="STR_ACM_Circulation_UseCocodamol_Progress">
                 <English>Using Co-codamol 15/500...</English>
             </Key>
+            <Key ID="STR_ACM_Circulation_Meloxicam">
+                <English>Meloxicam</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Meloxicam_SinglePack">
+                <English>Meloxicam (Single Pack)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Meloxicam_Desc">
+                <English>NSAID analgesic for mild-to-moderate pain. May marginally increase heart rate and blood pressure.</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_UseMeloxicam">
+                <English>Use Meloxicam</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_UseMeloxicam_Progress">
+                <English>Using Meloxicam...</English>
+            </Key>
             <Key ID="STR_ACM_Circulation_AmmoniaInhalant">
                 <English>Ammonia Inhalant</English>
                 <Polish>Amoniak wziewny</Polish>

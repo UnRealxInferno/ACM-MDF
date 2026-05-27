@@ -85,6 +85,7 @@ GVAR(Fluids_Array_Data) append FBTK_ARRAY_DATA;
 ["ACE_bloodIV", "ACM_BloodBag_ON_1000"] call ACEFUNC(common,registerItemReplacement);
 ["ACE_bloodIV_500", "ACM_BloodBag_ON_500"] call ACEFUNC(common,registerItemReplacement);
 ["ACE_bloodIV_250", "ACM_BloodBag_ON_250"] call ACEFUNC(common,registerItemReplacement);
+["ACE_painkillers", "ACM_Paracetamol"] call ACEFUNC(common,registerItemReplacement);
 
 // Syringes
 

@@ -39,10 +39,10 @@ class CfgMagazines {
         mass = 0.06;
     };
 
-    class ACM_Cocodamol: ACM_Paracetamol {
+    class ACM_Meloxicam: ACM_Paracetamol {
         picture = QPATHTOF(ui\paracetamol_ca.paa);
-        displayName = CSTRING(Cocodamol);
-        descriptionShort = CSTRING(Cocodamol_Desc);
+        displayName = CSTRING(Meloxicam);
+        descriptionShort = CSTRING(Meloxicam_Desc);
         count = 10;
         mass = 0.3;
     };

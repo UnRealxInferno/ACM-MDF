@@ -8,7 +8,7 @@ class CfgWeapons {
         scope = 1;
     };
     class ACM_SAMSplint: ACE_splint {
-        scope = 2;
+        scope = 1;
         author = "Blue";
         picture = QPATHTOF(ui\samSplint.paa);
         displayName = CSTRING(SAMSplint);

@@ -37,14 +37,12 @@ class ACM_Medication {
             maxPainReduce = 0.25;
         };
 
-        class Cocodamol: ACM_PO_Medication {
-            medicationType = "Opioid";
+        class Meloxicam: ACM_PO_Medication {
+            medicationType = "Default";
             minPainReduce = 0.35;
             painReduce = 0.35;
             maxPainReduce = 0.45;
-            hrIncrease[] = {-1, -2};
-            coSensitivityAdjust[] = {-0.01, -0.02};
-            breathingEffectivenessAdjust[] = {-0.003, -0.008};
+            hrIncrease[] = {1, 2};
         };
 
         class ACM_Inhalant_Medication {
@@ -492,7 +490,7 @@ class ACM_Medication {
         };
 
         class Opioid {
-            classnames[] = {"Morphine_IV", "Morphine", "Fentanyl_IV", "Fentanyl", "Fentanyl_BUC", "Cocodamol"};
+            classnames[] = {"Morphine_IV", "Morphine", "Fentanyl_IV", "Fentanyl", "Fentanyl_BUC"};
         };
 
         class Ketamine {

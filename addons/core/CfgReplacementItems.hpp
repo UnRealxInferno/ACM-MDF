@@ -16,7 +16,6 @@ class ACEGVAR(medical,replacementItems) {
         {"ACM_Syringe_5", 1},
         {"ACE_salineIV_250", 1},
         {"ACE_tourniquet", 1},
-        {"ACM_SAMSplint", 2},
         {"ACM_ChestSeal", 1},
         {"ACM_NPA", 1},
         {"ACM_NCDKit", 1},

@@ -453,10 +453,10 @@ class ACEGVAR(medical_treatment,actions) {
         litter[] = {};
         ACM_menuIcon = "ACM_Paracetamol";
     };
-    class Cocodamol: Paracetamol {
-        displayName = ECSTRING(circulation,UseCocodamol);
-        displayNameProgress = ECSTRING(circulation,UseCocodamol_Progress);
-        items[] = {"ACM_Cocodamol_SinglePack","ACM_Cocodamol"};
+    class Meloxicam: Paracetamol {
+        displayName = ECSTRING(circulation,UseMeloxicam);
+        displayNameProgress = ECSTRING(circulation,UseMeloxicam_Progress);
+        items[] = {"ACM_Meloxicam_SinglePack","ACM_Meloxicam"};
         ACM_menuIcon = "ACM_Paracetamol";
     };
     class Penthrox: Paracetamol {

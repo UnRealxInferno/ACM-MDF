@@ -247,11 +247,11 @@ class CfgWeapons {
         };
     };
 
-    class ACM_Cocodamol_SinglePack: ACM_Spray_Naloxone {
+    class ACM_Meloxicam_SinglePack: ACM_Spray_Naloxone {
         scope = 1;
         picture = QPATHTOF(ui\paracetamol_singlepack_ca.paa);
-        displayName = CSTRING(Cocodamol_SinglePack);
-        descriptionShort = CSTRING(Cocodamol_Desc);
+        displayName = CSTRING(Meloxicam_SinglePack);
+        descriptionShort = CSTRING(Meloxicam_Desc);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0.03;
         };
