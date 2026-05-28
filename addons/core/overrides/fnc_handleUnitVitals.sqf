@@ -202,6 +202,14 @@ if (missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false]) t
         _respirationRateAdjustment = _respirationRateAdjustment - (linearConversion [35, 28, _unitTemperature, 0, 4, true]);
         _peripheralResistanceAdjustment = _peripheralResistanceAdjustment + (linearConversion [36, 30, _unitTemperature, 0, 16, true]);
     };
+
+    // Fever/hyperthermia — infection drives temperature above 37 via Fever_Offset.
+    // Causes tachycardia, tachypnoea, and vasodilation (septic shock pattern at high temp).
+    if (_unitTemperature > 37.6) then {
+        _hrTargetAdjustment = _hrTargetAdjustment + (linearConversion [37.6, 41, _unitTemperature, 0, 30, true]);
+        _respirationRateAdjustment = _respirationRateAdjustment + (linearConversion [37.6, 41, _unitTemperature, 0, 6, true]);
+        _peripheralResistanceAdjustment = _peripheralResistanceAdjustment - (linearConversion [39, 41, _unitTemperature, 0, 20, true]);
+    };
 };
 
 // Update SPO2 intake and usage since last update

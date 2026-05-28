@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACM">
+    <Package name="Infection">
+        <!-- Settings -->
+        <Key ID="STR_ACM_Infection_cba_name">
+            <English>ACM - Infection</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_SETTING_Enable">
+            <English>Enable Infection System</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_SETTING_Enable_Desc">
+            <English>Enables wound infection and sepsis mechanics.</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_SETTING_StageTime">
+            <English>Infection Stage Time (min)</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_SETTING_StageTime_Desc">
+            <English>Time in minutes between infection stage escalations if left untreated.</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_SETTING_RiskMultiplier">
+            <English>Infection Risk Multiplier</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_SETTING_RiskMultiplier_Desc">
+            <English>Scales how quickly wounds accumulate infection risk. Higher values cause faster onset.</English>
+        </Key>
+
+        <!-- Moxifloxacin item -->
+        <Key ID="STR_ACM_Infection_Moxifloxacin">
+            <English>Moxifloxacin (400mg x5)</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_Moxifloxacin_Desc">
+            <English>Broad-spectrum oral antibiotic. Slow onset — takes approximately one hour to reach full effect. Best used early or prophylactically.</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_Moxifloxacin_SinglePack">
+            <English>Moxifloxacin 400mg</English>
+        </Key>
+
+        <!-- Treatment actions -->
+        <Key ID="STR_ACM_Infection_UseMoxifloxacin">
+            <English>Take Moxifloxacin</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_UseMoxifloxacin_Progress">
+            <English>Taking Moxifloxacin...</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_CheckWound">
+            <English>Check Wound</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_CheckWound_Progress">
+            <English>Checking wound...</English>
+        </Key>
+
+        <!-- Medical GUI injury list -->
+        <Key ID="STR_ACM_Infection_GUI_LocalInfection">
+            <English>Wound inflamed</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_GUI_SystemicInfection">
+            <English>Active infection</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_GUI_Sepsis">
+            <English>Septic wound</English>
+        </Key>
+
+        <!-- Check wound feedback -->
+        <Key ID="STR_ACM_Infection_CheckWound_NoWounds">
+            <English>No wounds present on this body part.</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_CheckWound_Healing">
+            <English>The wound appears clean and is healing normally.</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_CheckWound_Inflamed">
+            <English>The wound appears inflamed — redness and warmth around the site. Possible early infection.</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_CheckWound_Infected">
+            <English>The wound is badly infected. Significant swelling and pus formation. Patient needs antibiotics immediately.</English>
+        </Key>
+        <Key ID="STR_ACM_Infection_CheckWound_Critical">
+            <English>Severe wound infection. Patient is in septic shock — immediate antibiotic intervention required.</English>
+        </Key>
+    </Package>
+</Project>

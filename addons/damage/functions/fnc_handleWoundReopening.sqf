@@ -79,6 +79,20 @@ private _fnc_moveWound = {
 
         _unit setVariable [VAR_BODYPART_DAMAGE, _bodyPartDamage, true];
     };
+
+    // Add 1 unit back as an open wound so the wound actually reopens with bleeding
+    private _openWounds = GET_OPEN_WOUNDS(_unit);
+    private _openWoundsOnPart = _openWounds getOrDefault [_bodyPart, []];
+    private _openIdx = _openWoundsOnPart findIf {(_x select 0) isEqualTo _id};
+    if (_openIdx < 0) then {
+        _openWoundsOnPart pushBack [_id, 1, _bleeding, _damageToRemove];
+        _openWounds set [_bodyPart, _openWoundsOnPart];
+    } else {
+        (_openWoundsOnPart select _openIdx) params ["", "_openAmt", "_openBleed", "_openDmg"];
+        _openWoundsOnPart set [_openIdx, [_id, _openAmt + 1, _openBleed, _openDmg + _damageToRemove]];
+    };
+    _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
+    [_unit] call ACEFUNC(medical_status,updateWoundBloodLoss);
 };
 
 private _woundIndex = -1;

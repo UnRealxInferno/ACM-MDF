@@ -37,6 +37,19 @@ class ACM_Medication {
             maxPainReduce = 0.25;
         };
 
+        class Moxifloxacin: ACM_PO_Medication {
+            medicationType    = "Moxifloxacin";
+            timeInSystem      = 7200;
+            timeTillMaxEffect = 3600;
+            maxEffectTime     = 2400;
+            maxDose           = 0;
+            maxDoseDeviation  = 0;
+            maxPainReduce     = 0;
+            painReduce        = 0;
+            viscosityChange   = 0;
+            weightEffect      = 1;
+        };
+
         class Meloxicam: ACM_PO_Medication {
             medicationType = "Default";
             minPainReduce = 0.35;
@@ -528,6 +541,10 @@ class ACM_Medication {
         class Flumazenil {
             classnames[] = {"Flumazenil_IV"};
         };
+
+        class Moxifloxacin {
+            classnames[] = {"Moxifloxacin"};
+        };
     };
     class Concentration {
         class Naloxone {
@@ -636,6 +653,12 @@ class ACM_Medication {
             concentration = 0.1;
             dose = "0.5mg/5ml";
             volume = 5;
+        };
+
+        class Moxifloxacin {
+            concentration = 400;
+            dose = "400mg";
+            volume = 1;
         };
     };
 };

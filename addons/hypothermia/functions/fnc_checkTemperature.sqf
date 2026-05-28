@@ -27,7 +27,9 @@ switch (true) do {
     case (_unitTemperature < 35) : { _temperatureState = LLSTRING(temperature_cool); };
     case (_unitTemperature < 36.5) : { _temperatureState = LLSTRING(temperature_mild); };
     case (_unitTemperature < 37.6) : { _temperatureState = LLSTRING(temperature_warm); };
-    default { _temperatureState = LLSTRING(temperature_hot); };
+    case (_unitTemperature < 38.5) : { _temperatureState = LLSTRING(temperature_low_fever); };
+    case (_unitTemperature < 39.5) : { _temperatureState = LLSTRING(temperature_fever); };
+    default { _temperatureState = LLSTRING(temperature_high_fever); };
 };
 
 [_temperatureState, 1.5, _medic] call ACEFUNC(common,displayTextStructured);

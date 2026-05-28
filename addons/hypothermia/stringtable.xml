@@ -435,6 +435,15 @@
             <Dutch>Patiënt voelt heet aan</Dutch>
             <Turkish>Hasta donacak kadar soğuk hissediyor</Turkish>
         </Key>
+        <Key ID="STR_ACM_Hypothermia_temperature_low_fever">
+            <English>Patient has a low-grade fever</English>
+        </Key>
+        <Key ID="STR_ACM_Hypothermia_temperature_fever">
+            <English>Patient has a fever</English>
+        </Key>
+        <Key ID="STR_ACM_Hypothermia_temperature_high_fever">
+            <English>Patient has a high fever</English>
+        </Key>
         <Key ID="STR_ACM_Hypothermia_temperature_mild">
             <English>Patient feels mildly cool</English>
             <Czech>Pacient je mírně chladný</Czech>

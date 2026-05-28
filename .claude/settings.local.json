@@ -6,7 +6,9 @@
       "Bash(xargs grep -l \"PocketBVM.*ChestTubeKit\\\\|ChestTubeKit.*PocketBVM\")",
       "Bash(xargs ls -la)",
       "Bash(dir \"c:\\\\Users\\\\Inferno\\\\Documents\\\\GitHub\\\\ACM-MDF\\\\addons\" /b)",
-      "Bash(xargs grep -l \"ACM_ChestSeal\\\\|ACM_PocketBVM\")"
+      "Bash(xargs grep -l \"ACM_ChestSeal\\\\|ACM_PocketBVM\")",
+      "Bash(grep -v \"//\")",
+      "Bash(grep -v \"call.*fnc_\\\\|Example:\\\\|//\")"
     ]
   }
 }
