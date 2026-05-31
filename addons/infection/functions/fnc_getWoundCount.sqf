@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Returns total wound amounts per treatment state across all body parts.
  *
  * Arguments:

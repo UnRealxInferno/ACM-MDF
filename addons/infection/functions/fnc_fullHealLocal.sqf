@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Clears infection state on full heal.
  *
  * Arguments:

@@ -16,7 +16,7 @@ class CfgPatches {
             "ace_medical_treatment",
             "cba_settings"
         };
-        author = AUTHOR;
+        author = "INFERNO";
         VERSION_CONFIG;
     };
 };

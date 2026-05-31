@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Initialise infection monitoring for a unit. Called on spawn and respawn.
  *
  * Arguments:

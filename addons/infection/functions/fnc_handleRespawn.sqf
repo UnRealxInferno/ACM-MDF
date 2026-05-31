@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Resets infection state and restarts monitoring on respawn.
  *
  * Arguments:

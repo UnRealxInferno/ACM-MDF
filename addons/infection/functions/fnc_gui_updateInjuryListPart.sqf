@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Adds infection status to the per-body-part injury list in the ACE medical menu.
  * Only shown on body parts that have treated wounds, so it reads as "this wound looks wrong."
  *

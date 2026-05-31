@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Blue
+ * Author: INFERNO
  * Sepsis deterioration loop. Runs every 60 seconds while stage 3 is active.
  * Vitals deterioration (HR, RR, BP) is handled naturally by the fever temperature pipeline.
  * This PFH only manages pain and antibiotic regression.
@@ -32,7 +32,7 @@ private _id = [{
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
-    // Agonising pain — patient needs both antibiotics and pain management to function.
+    // Agonising pain - patient needs both antibiotics and pain management to function.
     // Stage regression is handled by the main infection PFH via treatment accumulator.
     [_patient, 0.20] call ACEFUNC(medical,adjustPainLevel);
 

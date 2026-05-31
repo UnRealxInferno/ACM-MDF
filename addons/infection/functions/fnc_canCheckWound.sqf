@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Condition for the Check Wound treatment action.
  * Returns true if the infection system is enabled and the target body part has any treated wounds.
  *

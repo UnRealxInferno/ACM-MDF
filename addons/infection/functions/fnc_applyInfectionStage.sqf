@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Transitions the patient to a new infection stage, applying or removing effects.
  *
  * Arguments:

@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Main infection monitoring loop. Runs at 1s intervals with an internal 30s throttle.
  * Handles risk accumulation, eligible time detection, stage escalation, and wound reopening boost.
  *

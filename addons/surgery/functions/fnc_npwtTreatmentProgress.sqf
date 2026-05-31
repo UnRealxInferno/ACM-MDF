@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: MiszczuZPolski
- * Progress callback for NPWT treatment. Bandages open wounds and stitches bandaged wounds.
+ * Progress callback for NPWT treatment. Bandages open wounds and fully removes closed wounds.
  *
  * Arguments:
  * 0: Args [Medic, Patient, Body Part] <ARRAY>
@@ -64,23 +64,7 @@ _treatedWound params ["_treatedID", "_treatedAmountOf", "", "_treatedDamageOf"];
 
 _stitchWounds set [_bodyPart, _stitchWoundsOnPart];
 
-private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
-private _stitchedWoundsOnPart = _stitchedWounds getOrDefault [_bodyPart, [], true];
-
-private _woundIndex = _stitchedWoundsOnPart findIf {
-    _x params ["_classID"];
-    _classID == _treatedID
-};
-
-if (_woundIndex == -1) then {
-    _stitchedWoundsOnPart pushBack _treatedWound;
-} else {
-    private _wound = _stitchedWoundsOnPart select _woundIndex;
-    _wound set [1, (_wound select 1) + _treatedAmountOf];
-};
-
 _patient setVariable [_stitchVar, _stitchWounds, true];
-_patient setVariable [VAR_STITCHED_WOUNDS, _stitchedWounds, true];
 
 private _partIndex = ALL_BODY_PARTS find _bodyPart;
 private _bodyPartDamage = _patient getVariable [QACEGVAR(medical,bodyPartDamage), []];

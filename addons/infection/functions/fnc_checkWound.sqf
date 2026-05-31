@@ -1,7 +1,7 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
- * Examine action callback — reports clinical infection signs to the medic for the examined body part.
+ * Author: INFERNO
+ * Examine action callback - reports clinical infection signs to the medic for the examined body part.
  *
  * Arguments:
  * 0: Medic <OBJECT>

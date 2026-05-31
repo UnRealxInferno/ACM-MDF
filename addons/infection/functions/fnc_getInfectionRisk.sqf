@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+﻿#include "..\script_component.hpp"
 /*
- * Author: Inferno
+ * Author: INFERNO
  * Calculates infection risk delta for the current 30s tick.
  * Returns 0 if the 1-hour eligibility window has not elapsed.
  *
