@@ -62,19 +62,19 @@
 
         <!-- Check wound feedback -->
         <Key ID="STR_ACM_Infection_CheckWound_NoWounds">
-            <English>No wounds present on this body part.</English>
+            <English>No wounds here.</English>
         </Key>
         <Key ID="STR_ACM_Infection_CheckWound_Healing">
-            <English>The wound appears clean and is healing normally.</English>
+            <English>Clean, healing well.</English>
         </Key>
         <Key ID="STR_ACM_Infection_CheckWound_Inflamed">
-            <English>The wound appears inflamed — redness and warmth around the site. Possible early infection.</English>
+            <English>Inflamed, early infection.</English>
         </Key>
         <Key ID="STR_ACM_Infection_CheckWound_Infected">
-            <English>The wound is badly infected. Significant swelling and pus formation. Patient needs antibiotics immediately.</English>
+            <English>Infected, needs antibiotics.</English>
         </Key>
         <Key ID="STR_ACM_Infection_CheckWound_Critical">
-            <English>Severe wound infection. Patient is in septic shock — immediate antibiotic intervention required.</English>
+            <English>Septic, antibiotics now.</English>
         </Key>
     </Package>
 </Project>
