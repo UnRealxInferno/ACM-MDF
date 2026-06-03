@@ -25,7 +25,9 @@ if (_selectionN < 0 || {_selectionN > 5}) exitWith {};
 private _stage = _target getVariable [QGVAR(Infection_Stage), 0];
 if (_stage == 0) exitWith {};
 
-private _partName = ["body", "head", "leftarm", "rightarm", "leftleg", "rightleg"] select _selectionN;
+// Selection index ordering matches ACE (and STRING_BODY_PARTS): 0=head, 1=body, ...
+// Must NOT use the body-first ALL_BODY_PARTS_PRIORITY ordering here, or head/body get swapped.
+private _partName = ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"] select _selectionN;
 
 private _hasWoundsOnPart =
     !(GET_BANDAGED_WOUNDS(_target) getOrDefault [_partName, []] isEqualTo []) ||
