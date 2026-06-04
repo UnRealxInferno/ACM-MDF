@@ -120,6 +120,7 @@ class CfgVehicles {
             ADDITEM(ACM_Vial_TXA,10);
             ADDITEM(ACM_Vial_Amiodarone,10);
             ADDITEM(ACM_Vial_Atropine,10);
+            ADDITEM(ACM_Vial_AtropineConc,10);
             ADDITEM(ACM_BloodBag_ON_1000,10);
             ADDITEM(ACM_BloodBag_ON_500,10);
             ADDITEM(ACM_BloodBag_ON_250,10);
@@ -162,6 +163,7 @@ class CfgVehicles {
             // Treatment
             ADDITEM(ACM_Autoinjector_ATNA,30);
             ADDITEM(ACM_Autoinjector_Midazolam,10);
+            ADDITEM(ACM_Vial_AtropineConc,10);
             //ADDITEM(ACM_Ampule_Dimercaprol,10);
             // Other
             ADDITEM(ACM_GasMaskFilter,30);

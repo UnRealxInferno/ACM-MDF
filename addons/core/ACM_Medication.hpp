@@ -184,6 +184,8 @@ class ACM_Medication {
             hrIncrease[] = {-18, 0};
         };
 
+        class AtropineConc_IV: Atropine_IV {};
+
         class Lidocaine_IV: ACM_IV_Medication {
             medicationType = "Lidocaine_IV";
             hrIncrease[] = {-2, -10};
@@ -380,6 +382,8 @@ class ACM_Medication {
             hrIncrease[] = {-10, 0};
         };
 
+        class AtropineConc: Atropine {};
+
         class Lidocaine: ACM_IM_Medication {
             timeInSystem = 600;
             timeTillMaxEffect = 10;
@@ -563,6 +567,12 @@ class ACM_Medication {
             concentration = 1;
             dose = "1mg/1ml";
             volume = 1;
+        };
+
+        class AtropineConc {
+            concentration = 10;
+            dose = "100mg/10ml";
+            volume = 10;
         };
 
         class TXA {
