@@ -210,6 +210,13 @@ if (missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false]) t
         _respirationRateAdjustment = _respirationRateAdjustment + (linearConversion [37.6, 41, _unitTemperature, 0, 6, true]);
         _peripheralResistanceAdjustment = _peripheralResistanceAdjustment - (linearConversion [39, 41, _unitTemperature, 0, 20, true]);
     };
+
+    // VFib is the expected rhythm below 30°C; asystole below 25°C.
+    // Set target rhythm continuously so handleCardiacArrest picks up the right rhythm on entry
+    // or on deterioration from the reversible PFH timeout.
+    if (_unitTemperature < 30) then {
+        _unit setVariable [QEGVAR(circulation,CardiacArrest_TargetRhythm), [ACM_Rhythm_VF, ACM_Rhythm_Asystole] select (_unitTemperature < 25)];
+    };
 };
 
 // Update SPO2 intake and usage since last update
@@ -298,7 +305,14 @@ switch (true) do {
             [_unit, "Oxygen Deprivation"] call ACEFUNC(medical_status,setDead);
         };
     };
-    case (IN_CRDC_ARRST(_unit)): {}; // if in cardiac arrest just break now to avoid throwing unneeded events
+    case (IN_CRDC_ARRST(_unit)): {
+        // Below 25°C, any shockable/reversible rhythm transitions to asystole.
+        if (missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false] && _unitTemperature < 25) then {
+            if !(_unit getVariable [QEGVAR(circulation,Cardiac_RhythmState), ACM_Rhythm_Sinus] == ACM_Rhythm_Asystole) then {
+                _unit setVariable [QEGVAR(circulation,Cardiac_RhythmState), ACM_Rhythm_Asystole, true];
+            };
+        };
+    };
     case ([_unit] call EFUNC(circulation,recentAEDShock)): {};
     case (_hemorrhage == 4): {
         TRACE_3("Class IV Hemorrhage",_unit,_hemorrhage,_bloodVolume);
