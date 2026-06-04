@@ -617,6 +617,11 @@ class ACEGVAR(medical_treatment,actions) {
     SYRINGE_ACTION_IV(Atropine,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Atropine,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Atropine)));
     SYRINGE_ACTION_IV(Atropine,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,Atropine,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Atropine)));
 
+    SYRINGE_ACTION_IV(AtropineConc,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,AtropineConc,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,AtropineConc)));
+    SYRINGE_ACTION_IV(AtropineConc,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,AtropineConc,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,AtropineConc)));
+    SYRINGE_ACTION_IV(AtropineConc,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,AtropineConc,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,AtropineConc)));
+    SYRINGE_ACTION_IV(AtropineConc,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,1,AtropineConc,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,AtropineConc)));
+
     SYRINGE_ACTION_IV(Morphine,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,10,Morphine,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Morphine)));
     SYRINGE_ACTION_IV(Morphine,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,5,Morphine,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Morphine)));
     SYRINGE_ACTION_IV(Morphine,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Push,3,Morphine,Intravenous)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Pushing,Morphine)));
@@ -755,6 +760,11 @@ class ACEGVAR(medical_treatment,actions) {
     SYRINGE_ACTION_IM(Atropine,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Atropine,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Atropine)));
     SYRINGE_ACTION_IM(Atropine,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,Atropine,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Atropine)));
     SYRINGE_ACTION_IM(Atropine,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,Atropine,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Atropine)));
+
+    SYRINGE_ACTION_IM(AtropineConc,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,AtropineConc,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,AtropineConc)));
+    SYRINGE_ACTION_IM(AtropineConc,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,AtropineConc,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,AtropineConc)));
+    SYRINGE_ACTION_IM(AtropineConc,3,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,3,AtropineConc,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,AtropineConc)));
+    SYRINGE_ACTION_IM(AtropineConc,1,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,1,AtropineConc,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,AtropineConc)));
 
     SYRINGE_ACTION_IM(Adenosine,10,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,10,Adenosine,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Adenosine)));
     SYRINGE_ACTION_IM(Adenosine,5,__EVAL(call compile SYRINGE_ACTION_FORMAT(Inject,5,Adenosine,Intramuscular)),__EVAL(call compile SYRINGE_PROGRESS_FORMAT(Injecting,Adenosine)));

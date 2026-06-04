@@ -1099,6 +1099,17 @@
                 <French>Atropine</French>
                 <Polish>Atropina</Polish>
             </Key>
+            <Key ID="STR_ACM_Circulation_Medication_AtropineConc">
+                <English>Atropine</English>
+                <Portuguese>Atropina</Portuguese>
+                <Russian>Атропин</Russian>
+                <Ukrainian>Атропін</Ukrainian>
+                <Korean>아트로핀 (Atropine)</Korean>
+                <Spanish>Atropina</Spanish>
+                <Turkish>Atropin</Turkish>
+                <French>Atropine</French>
+                <Polish>Atropina</Polish>
+            </Key>
             <Key ID="STR_ACM_Circulation_Medication_Fentanyl">
                 <English>Fentanyl</English>
                 <Polish>Fentanyl</Polish>
@@ -1417,6 +1428,12 @@
                 <Turkish>Sinir ajanı maruziyetini tedavi etmek ve kalp hızını artırmak için kullanılır</Turkish>
                 <French>Utiliser pour traiter l'expositions aux agents organophosphorés et augemente le rythme cardiaque</French>
                 <Polish>Stosowany w leczeniu narażenia na działanie środka paralityczno-drgawkowego i przyspieszenia akcji serca</Polish>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_AtropineConc">
+                <English>Atropine Vial (100mg/10ml)</English>
+            </Key>
+            <Key ID="STR_ACM_Circulation_Vial_AtropineConc_Desc">
+                <English>Concentrated atropine for nerve agent exposure; intended for IV/IO administration in CBRN casualties</English>
             </Key>
             <Key ID="STR_ACM_Circulation_Vial_Fentanyl">
                 <English>Fentanyl Vial (100mcg/2ml)</English>
