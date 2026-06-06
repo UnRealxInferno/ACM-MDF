@@ -5,7 +5,7 @@ class CfgWeapons {
     class ACE_splint: ACE_ItemCore {
         displayName = CSTRING(UniversalSplint);
         descriptionShort = CSTRING(UniversalSplint_Desc);
-        scope = 1;
+        scope = 2;
     };
     class ACM_SAMSplint: ACE_splint {
         scope = 1;

@@ -527,8 +527,12 @@ if (_fractureState != 0) then {
             };
         };
     } else {
-        if (_fractureState > 0 && GVAR(showFracture)) then {
-            _entries pushBack [localize ACELSTRING(medical_gui,Status_Fractured), [1, 0, 0, 1]];
+        if (_fractureState == -1) then { // Splinted via ACE splint (immobilised, not healed)
+            _entries pushBack [localize ACELSTRING(medical_gui,Status_SplintApplied), [0.2, 0.2, 1, 1]];
+        } else {
+            if (_fractureState > 0 && GVAR(showFracture)) then {
+                _entries pushBack [localize ACELSTRING(medical_gui,Status_Fractured), [1, 0, 0, 1]];
+            };
         };
     };
 };
