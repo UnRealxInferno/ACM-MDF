@@ -4,6 +4,11 @@ hemtt
 hemtt.exe
 *.biprivatekey
 
+# Build artifacts (binarize / HEMTT output) - always regenerated from source, never commit
+*.bin
+*.sqfc
+pbo.json
+
 *.bat
 *.exe
 .claude
