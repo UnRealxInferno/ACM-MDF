@@ -139,12 +139,6 @@ private _variableList = [
     // Disability
     [QEGVAR(disability,Tourniquet_Time), [0,0,0,0,0,0]],
     [QEGVAR(disability,Tourniquet_ApplyTime), [-1,-1,-1,-1,-1,-1]],
-    [VAR_SPLINTS, DEFAULT_SPLINT_VALUES],
-    [QEGVAR(disability,Fracture_State), [0,0,0,0,0,0]],
-    [QEGVAR(disability,Fracture_Prepared), [false,false,false,false,false,false]],
-    [QEGVAR(disability,Fracture_Pain), [false,false,false,false,false,false]],
-    [QEGVAR(disability,Fracture_ReFracture), [false,false,false,false,false,false]],
-    [QEGVAR(disability,Fracture_NoEffect), [false,false,false,false,false,false]],
     [VAR_TOURNIQUET_NECROSIS, DEFAULT_TOURNIQUET_NECROSIS],
     [VAR_TOURNIQUET_NECROSIS_T, DEFAULT_TOURNIQUET_NECROSIS],
     [QEGVAR(disability,TourniquetEffects_PFH), -1],

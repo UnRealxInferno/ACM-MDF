@@ -1,4 +1,5 @@
 *.pbo
+*.sqfc
 .hemttout
 hemtt
 hemtt.exe
@@ -7,3 +8,4 @@ hemtt.exe
 *.bat
 *.exe
 .claude
+Reference Material/
