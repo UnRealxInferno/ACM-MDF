@@ -24,11 +24,9 @@ params ["_medic", "_patient", ["_type", ""]];
     _args params ["_patient", "_insertTime", "_type"];
 
     private _woreOff = CBA_missionTime - _insertTime > 180;
-    private _inLyingState = _patient getVariable [QEGVAR(core,Lying_State), false];
-    private _inSittingState = _patient getVariable [QEGVAR(core,Sitting_State), false];
     private _lozengeItem = _patient getVariable [QGVAR(LozengeItem), ""];
 
-    if (_lozengeItem != _type || IS_UNCONSCIOUS(_patient) || _woreOff || (!_inLyingState && !_inSittingState)) exitWith {
+    if (_lozengeItem != _type || IS_UNCONSCIOUS(_patient) || _woreOff) exitWith {
         private _classname = format ["%1_BUC", _type];
 
         private _medicationList = +(_patient getVariable [VAR_MEDICATIONS,[]]);
