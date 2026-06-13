@@ -2,8 +2,17 @@
 <Project name="ACM">
     <Package name="Burns">
         <!-- Settings -->
-        <Key ID="STR_ACM_Burns_cba_name">
-            <English>ACM - Burns</English>
+        <Key ID="STR_ACM_Burns_Category">
+            <English>MedMash - Burns</English>
+            <Polish>MedMash - Burns</Polish>
+            <French>MedMash - Burns</French>
+            <German>MedMash - Burns</German>
+            <Portuguese>MedMash - Burns</Portuguese>
+            <Russian>MedMash - Burns</Russian>
+            <Ukrainian>MedMash - Burns</Ukrainian>
+            <Korean>MedMash - Burns</Korean>
+            <Spanish>MedMash - Burns</Spanish>
+            <Turkish>MedMash - Burns</Turkish>
         </Key>
         <Key ID="STR_ACM_Burns_SETTING_Enable">
             <English>Enable Burn System</English>

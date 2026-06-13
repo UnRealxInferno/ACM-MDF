@@ -2,8 +2,17 @@
 <Project name="ACM">
     <Package name="Infection">
         <!-- Settings -->
-        <Key ID="STR_ACM_Infection_cba_name">
-            <English>ACM - Infection</English>
+        <Key ID="STR_ACM_Infection_Category">
+            <English>MedMash - Infection</English>
+            <Polish>MedMash - Infection</Polish>
+            <French>MedMash - Infection</French>
+            <German>MedMash - Infection</German>
+            <Portuguese>MedMash - Infection</Portuguese>
+            <Russian>MedMash - Infection</Russian>
+            <Ukrainian>MedMash - Infection</Ukrainian>
+            <Korean>MedMash - Infection</Korean>
+            <Spanish>MedMash - Infection</Spanish>
+            <Turkish>MedMash - Infection</Turkish>
         </Key>
         <Key ID="STR_ACM_Infection_SETTING_Enable">
             <English>Enable Infection System</English>

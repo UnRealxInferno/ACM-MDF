@@ -32,6 +32,3 @@
 
 // Additional pain when a 2nd/3rd-degree burn is bandaged with a non-silver-nylon dressing.
 #define BURN_WRONG_DRESSING_PAIN 0.25
-
-// Explosion source: distance (m) over which a nearby blast's burn chance falls off to zero.
-#define BURN_EXPLOSION_RANGE 12
