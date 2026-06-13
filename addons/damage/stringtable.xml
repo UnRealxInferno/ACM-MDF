@@ -475,6 +475,33 @@
                 <French>Brûlure chimique mineure</French>
                 <Polish>Lekkie poparzenia chemiczne</Polish>
             </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn1_Minor">
+                <English>1st Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn1_Medium">
+                <English>1st Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn1_Large">
+                <English>1st Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn2_Minor">
+                <English>2nd Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn2_Medium">
+                <English>2nd Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn2_Large">
+                <English>2nd Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn3_Minor">
+                <English>3rd Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn3_Medium">
+                <English>3rd Degree Burn</English>
+            </Key>
+            <Key ID="STR_ACM_Damage_Wounds_Burn3_Large">
+                <English>3rd Degree Burn</English>
+            </Key>
         </Container>
         <Container name="// Items //">
             <Key ID="STR_ACM_Damage_PressureBandage">

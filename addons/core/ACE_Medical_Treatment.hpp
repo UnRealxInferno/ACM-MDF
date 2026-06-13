@@ -5,6 +5,7 @@
 
 class ACE_ADDON(Medical_Treatment) {
     class Bandaging {
+        class BasicBandage;
         class FieldDressing;
 
         class PressureBandage: FieldDressing {
@@ -294,6 +295,32 @@ class ACE_ADDON(Medical_Treatment) {
             class PunctureWoundMinor: PunctureWound {};
             class PunctureWoundMedium: PunctureWound {};
             class PunctureWoundLarge: PunctureWound {};
+        };
+
+        // ACM_burns: silver nylon dressing - the proper burn dressing. Effective on all burn depths
+        // with low reopening; used via a normal bandage action. Using any OTHER dressing on a 2nd/3rd
+        // degree burn costs pain (handled by the bandageLocal listener in ACM_burns). Non-burn wounds
+        // fall back to the inherited FieldDressing effectiveness.
+        class ACM_SilverNylonDressing: FieldDressing {
+            class Burn1Minor { effectiveness = 8; reopeningChance = 0.1; reopeningMinDelay = 600; reopeningMaxDelay = 1200; };
+            class Burn1Medium: Burn1Minor {};
+            class Burn1Large: Burn1Minor {};
+            class Burn2Minor: Burn1Minor { effectiveness = 7; };
+            class Burn2Medium: Burn2Minor {};
+            class Burn2Large: Burn2Minor {};
+            class Burn3Minor: Burn1Minor { effectiveness = 7; };
+            class Burn3Medium: Burn3Minor {};
+            class Burn3Large: Burn3Minor {};
+        };
+
+        // ACM_burns: burn cream - alternative for 1st-degree burns ONLY. Inherits BasicBandage (which
+        // has NO per-wound subclasses) and sets base effectiveness 0, so it does nothing to any wound
+        // except the Burn1 entries below. The treatment action is also gated to open Burn1 parts.
+        class ACM_BurnCream: BasicBandage {
+            effectiveness = 0;
+            class Burn1Minor { effectiveness = 6; reopeningChance = 0; reopeningMinDelay = 0; reopeningMaxDelay = 0; };
+            class Burn1Medium: Burn1Minor {};
+            class Burn1Large: Burn1Minor {};
         };
     };
 

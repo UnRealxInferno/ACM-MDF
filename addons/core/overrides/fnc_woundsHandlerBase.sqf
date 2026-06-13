@@ -86,6 +86,12 @@ private _bodyPartVisParams = [_patient, false, false, false, false]; // params a
         ACEGVAR(medical_damage,woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];
         private _woundClassIDToAdd = ACEGVAR(medical_damage,woundClassNames) find _woundTypeToAdd;
 
+        // ACM_burns: full-thickness (3rd-degree) burns destroy nerve endings, so some are painless.
+        // Diceroll the pain off at creation (pain is computed once here, then fades).
+        if (_woundTypeToAdd isEqualTo "Burn3" && {random 1 < (missionNamespace getVariable [QEGVAR(burns,burn3PainlessChance), 0.5])}) then {
+            _injuryPain = 0;
+        };
+
         // Add a bit of random variance to wounds
         private _woundDamage = _dmgPerWound * _dmgMultiplier * random [0.9, 1, 1.1];
 
@@ -111,12 +117,17 @@ private _bodyPartVisParams = [_patient, false, false, false, false]; // params a
         // minor is > LARGE_WOUND_THRESHOLD^3
         private _category = 0  max (2 - floor (ln _woundSize / ln LARGE_WOUND_THRESHOLD)) min 2;
 
+        // ACM_burns: collapse the size categories for burns so each depth is a single wound type
+        // (1st / 2nd / 3rd degree). Same-depth burns then merge into one entry instead of separate
+        // Minor/Medium/Large lines.
+        if (_woundTypeToAdd in ["Burn1","Burn2","Burn3"]) then { _category = 1; };
+
         private _classComplex = 10 * _woundClassIDToAdd + _category;
 
         // Create a new injury. Format [0:classComplex, 1:amountOf, 2:bleedingRate, 3:woundDamage]
         private _injury = [_classComplex, 1, _bleeding, _woundDamage];
 
-        if (!(_woundTypeToAdd in ["ThermalBurn","ChemicalBurn"]) && (_bodyPart isEqualTo "head" || {_bodyPart isEqualTo "body" && {_woundDamage > PENETRATION_THRESHOLD}})) then {
+        if (!(_woundTypeToAdd in ["ThermalBurn","ChemicalBurn","Burn1","Burn2","Burn3"]) && (_bodyPart isEqualTo "head" || {_bodyPart isEqualTo "body" && {_woundDamage > PENETRATION_THRESHOLD}})) then {
             _criticalDamage = true;
             if (EGVAR(damage,enable)) then {
                 if ([_patient, _bodyPartDamage] call EFUNC(damage,handleTrauma)) then {
@@ -196,6 +207,12 @@ private _bodyPartVisParams = [_patient, false, false, false, false]; // params a
             _existingWounds pushBack _injury;
         };
         _createdWounds = true;
+
+        // ACM_burns: 2nd/3rd-degree burns trigger event-driven side effects in the burns component
+        // (blood-volume loss, and an airway-burn roll on head burns). Defaulted - no hard dependency.
+        if (_woundTypeToAdd in ["Burn2","Burn3"]) then {
+            [QEGVAR(burns,burnApplied), [_patient, _bodyPart, _woundTypeToAdd]] call CBA_fnc_localEvent;
+        };
 
         [_patient, _bodyPart, (10 * _woundClassIDToAdd), _category, _bleeding] call EFUNC(damage,inflictInternalBleeding);
         //[_patient, _bodyPart, _classComplex, _woundDamage] call EFUNC(damage,handleWoundReopening); // TODO test this

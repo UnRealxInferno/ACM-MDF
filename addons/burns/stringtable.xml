@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACM">
+    <Package name="Burns">
+        <!-- Settings -->
+        <Key ID="STR_ACM_Burns_cba_name">
+            <English>ACM - Burns</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_Enable">
+            <English>Enable Burn System</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_Enable_Desc">
+            <English>Enables 1st/2nd/3rd-degree burn wounds and their effects (hypotension, airway burns, dressing pain).</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_Sources">
+            <English>Enable Burn Sources</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_Sources_Desc">
+            <English>Allow nearby explosions to burn units. (ACE fire always burns units regardless.)</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_IgniteChance">
+            <English>Explosion Burn Chance Multiplier</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_IgniteChance_Desc">
+            <English>Scales the chance that a nearby explosion burns a unit.</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_Burn3Painless">
+            <English>3rd-Degree Painless Chance</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_Burn3Painless_Desc">
+            <English>Chance that a 3rd-degree (full-thickness) burn is painless, due to destroyed nerve endings.</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_AirwayChance">
+            <English>Head Burn Airway Injury Chance</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SETTING_AirwayChance_Desc">
+            <English>Chance that a 2nd/3rd-degree burn to the head causes an airway burn (secured with a surgical airway).</English>
+        </Key>
+
+        <!-- Items -->
+        <Key ID="STR_ACM_Burns_SilverNylon">
+            <English>Silver Nylon Dressing</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_SilverNylon_Desc">
+            <English>Silver-impregnated nylon dressing - the correct dressing for burns. Using other dressings on a deep burn causes additional pain.</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_BurnCream">
+            <English>Burn Cream</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_BurnCream_Desc">
+            <English>Soothing cream for superficial (1st-degree) burns - an alternative to dressing them. Ineffective on deeper burns.</English>
+        </Key>
+
+        <!-- Treatment actions -->
+        <Key ID="STR_ACM_Burns_SilverNylon_Use">
+            <English>Apply Silver Nylon Dressing</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_BurnCream_Use">
+            <English>Apply Burn Cream</English>
+        </Key>
+        <Key ID="STR_ACM_Burns_BurnCream_Progress">
+            <English>Applying burn cream...</English>
+        </Key>
+
+        <!-- Airway exam label (read by ACM_airway fnc_checkAirway) -->
+        <Key ID="STR_ACM_Burns_CheckAirway_Burned">
+            <English>Airway Burned</English>
+        </Key>
+    </Package>
+</Project>

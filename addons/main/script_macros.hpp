@@ -216,7 +216,7 @@
 
 #define IN_CRITICAL_STATE(unit) (unit getVariable [QEGVAR(core,CriticalVitals_State), false])
 
-#define ACM_WOUNDS ["ChemicalBurn"]
+#define ACM_WOUNDS ["ChemicalBurn", "Burn1", "Burn2", "Burn3"]
 
 // Body Parts
 #define BODYPART_N_HEAD     0

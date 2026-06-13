@@ -219,6 +219,15 @@ if (missionNamespace getVariable ["ACM_hypothermia_hypothermiaActive", false]) t
     };
 };
 
+// ACM_burns: a burn-swollen upper airway obstructs ventilation while the casualty is still conscious,
+// reducing breathing effectiveness -> SpO2 falls -> syncope (after which the airway-inflammation model
+// in getAirwayState takes over). Scales with the airway-inflammation value the burn seeded; a surgical
+// airway (cric) bypasses the obstruction and is the treatment. Defaulted -> no hard dependency.
+if ((_unit getVariable [QEGVAR(burns,AirwayBurned), false]) && {!HAS_SURGICAL_AIRWAY(_unit)}) then {
+    private _airwayBurnSeverity = _unit getVariable [QEGVAR(CBRN,AirwayInflammation), 0];
+    _breathingEffectivenessAdjustment = _breathingEffectivenessAdjustment - (linearConversion [15, 100, _airwayBurnSeverity, 0.15, 0.85, true]);
+};
+
 // Update SPO2 intake and usage since last update
 private _oxygenSaturation = [_unit, _respirationRateAdjustment, _coSensitivityAdjustment, _breathingEffectivenessAdjustment, _deltaT, _syncValues] call ACEFUNC(medical_vitals,updateOxygen);
 

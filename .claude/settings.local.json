@@ -8,7 +8,10 @@
       "Bash(dir \"c:\\\\Users\\\\Inferno\\\\Documents\\\\GitHub\\\\ACM-MDF\\\\addons\" /b)",
       "Bash(xargs grep -l \"ACM_ChestSeal\\\\|ACM_PocketBVM\")",
       "Bash(grep -v \"//\")",
-      "Bash(grep -v \"call.*fnc_\\\\|Example:\\\\|//\")"
+      "Bash(grep -v \"call.*fnc_\\\\|Example:\\\\|//\")",
+      "Bash(awk '/class FieldDressing/{f=1} f{print} /class FieldDressing/{c++} f&&/^ };/{if\\(--depth<=0 && started\\){exit}} f&&/{/{depth++;started=1}' \"c:/Users/Inferno/Documents/GitHub/ACM-MDF/Reference Material/@ace/addons/medical_treatment/ACE_Medical_Treatment.hpp\")",
+      "Bash(printf '%s' 'x\\\\ACM\\\\addons\\\\burns')",
+      "Bash(xxd '$PBOPREFIX$')"
     ]
   }
 }
