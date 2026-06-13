@@ -6,7 +6,7 @@ class CfgMagazines {
     class ACM_SilverNylonDressing: CA_Magazine {
         scope = 2;
         author = "INFERNO";
-        picture = "\x\ACM\addons\circulation\ui\paracetamol_ca.paa";
+        picture = QPATHTOF(ui\silverdressing.paa);
         displayName = CSTRING(SilverNylon);
         descriptionShort = CSTRING(SilverNylon_Desc);
         ACE_isMedicalItem = 1;
@@ -17,6 +17,7 @@ class CfgMagazines {
 
     // Burn cream - alternative treatment for 1st-degree burns only.
     class ACM_BurnCream: ACM_SilverNylonDressing {
+        picture = QPATHTOF(ui\cream.paa);
         displayName = CSTRING(BurnCream);
         descriptionShort = CSTRING(BurnCream_Desc);
         count = 5;

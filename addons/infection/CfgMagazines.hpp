@@ -4,7 +4,7 @@ class CfgMagazines {
     class ACM_Moxifloxacin: CA_Magazine {
         scope = 2;
         author = "Inferno";
-        picture = "\x\ACM\addons\circulation\ui\paracetamol_ca.paa";
+        picture = QPATHTOF(ui\moxiflox.paa);
         displayName = CSTRING(Moxifloxacin);
         descriptionShort = CSTRING(Moxifloxacin_Desc);
         ACE_isMedicalItem = 1;

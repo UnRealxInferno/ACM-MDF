@@ -4,7 +4,7 @@ class CfgWeapons {
 
     class ACM_Moxifloxacin_SinglePack: ACE_ItemCore {
         scope = 1;
-        picture = "\x\ACM\addons\circulation\ui\paracetamol_singlepack_ca.paa";
+        picture = QPATHTOF(ui\moxiflox.paa);
         displayName = CSTRING(Moxifloxacin_SinglePack);
         descriptionShort = CSTRING(Moxifloxacin_Desc);
         ACE_isMedicalItem = 1;
