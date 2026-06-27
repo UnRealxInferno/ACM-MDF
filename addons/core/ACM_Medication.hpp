@@ -40,14 +40,14 @@ class ACM_Medication {
         class Moxifloxacin: ACM_PO_Medication {
             medicationType    = "Moxifloxacin";
             timeInSystem      = 7200;
-            timeTillMaxEffect = 3600;
+            timeTillMaxEffect = 600;
             maxEffectTime     = 2400;
             maxDose           = 0;
             maxDoseDeviation  = 0;
             maxPainReduce     = 0;
             painReduce        = 0;
             viscosityChange   = 0;
-            weightEffect      = 1;
+            weightEffect      = 0;
         };
 
         class Meloxicam: ACM_PO_Medication {
