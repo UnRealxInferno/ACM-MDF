@@ -8,6 +8,16 @@
     true
 ] call CBA_fnc_addSetting;
 
+// Count goggles-named eyewear (no ACE_Resistance) as full eye protection
+[
+    QGVAR(goggles_name_fallback),
+    "CHECKBOX",
+    LLSTRING(setting_goggles_name_fallback),
+    [CBA_SETTINGS_CAT, LSTRING(setting_subcategory_injury)],
+    [true],
+    true
+] call CBA_fnc_addSetting;
+
 // Probability to get dust in the eyes
 [
     QGVAR(probability_dust),

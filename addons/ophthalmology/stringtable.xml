@@ -177,6 +177,9 @@
             <Dutch>Ogen spoelen</Dutch>
             <Turkish>Gözleri yıka</Turkish>
         </Key>
+        <Key ID="STR_ACM_Ophthalmology_setting_goggles_name_fallback">
+            <English>Goggles count as eye protection</English>
+        </Key>
         <Key ID="STR_ACM_Ophthalmology_setting_enable">
             <English>Enable eye injuries</English>
             <French>Autoriser les lésions oculaires</French>
