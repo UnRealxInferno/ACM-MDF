@@ -21,7 +21,11 @@ params ["_unit", "_cause"];
 private _random = floor (random 100);
 
 if (_cause in ["dust", "rotorWash"]) then {
-    if (_random < GVAR(probability_dust)) exitWith {
+    // ACE only raises these events for eyewear it does not recognise (ACE_Resistance == 0), so
+    // this is what extends the name fallback in getEyeProtection to dust and rotorwash.
+    private _eyeProtection = [_unit] call FUNC(getEyeProtection);
+
+    if (_random < GVAR(probability_dust) * (1 - _eyeProtection)) exitWith {
         [0.1, false] call FUNC(effectEyeBlink);
 
         private _dustInjuryLight = _unit getVariable [QGVAR(dustInjuryLight), 0];
