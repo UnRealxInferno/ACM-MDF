@@ -17,3 +17,6 @@
 #include "\x\ACM\addons\main\script_macros.hpp"
 
 #define GET_DUST_INJURY(unit) ((unit getVariable [QGVAR(dustInjuryLight), 0]) + (unit getVariable [QGVAR(dustInjuryHeavy), 0]))
+
+// Facewear names treated as eye protection when the item has no ACE_Protection value
+#define EYE_PROTECTION_KEYWORDS ["goggle", "respirator", "gasmask", "gas mask", "visor"]

@@ -178,7 +178,7 @@
             <Turkish>Gözleri yıka</Turkish>
         </Key>
         <Key ID="STR_ACM_Ophthalmology_setting_goggles_name_fallback">
-            <English>Goggles count as eye protection</English>
+            <English>Goggles/masks without ACE data count as eye protection</English>
         </Key>
         <Key ID="STR_ACM_Ophthalmology_setting_enable">
             <English>Enable eye injuries</English>
