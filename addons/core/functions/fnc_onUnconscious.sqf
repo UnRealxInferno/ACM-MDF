@@ -21,13 +21,24 @@ params ["_patient", "_state"];
 if (!local _patient) exitWith {};
 
 if !(_state) then {
+    private _inVehicle = !(isNull objectParent _patient);
+
     if (_patient getVariable [QGVAR(WasTreated), false]) then {
-        _patient setVariable [QGVAR(Lying_State), true, true];
         _patient setVariable [QGVAR(WasTreated), false, true];
+
+        if !(_inVehicle) then {
+            _patient setVariable [QGVAR(Lying_State), true, true];
+        };
     };
 
-    if ((_patient getVariable [QGVAR(Lying_State), false]) && ((animationState _patient) in LYING_ANIMATION)) then {
-        [QGVAR(getUpPrompt), [_patient], _patient] call CBA_fnc_targetEvent;
+    if (_inVehicle) then { // Patients wake up seated inside vehicles, they can't lie down or get up in there
+        if (_patient getVariable [QGVAR(Lying_State), false]) then {
+            _patient setVariable [QGVAR(Lying_State), false, true];
+        };
+    } else {
+        if ((_patient getVariable [QGVAR(Lying_State), false]) && ((animationState _patient) in LYING_ANIMATION)) then {
+            [QGVAR(getUpPrompt), [_patient], _patient] call CBA_fnc_targetEvent;
+        };
     };
 
     _patient setVariable [QEGVAR(breathing,BVM_lastBreath), -1, true];

@@ -186,7 +186,7 @@ class CfgVehicles {
                 class ACM_LyingState_GetUp {
                     displayName = CSTRING(LyingState_GetUp);
                     icon = "";
-                    condition = QUOTE(!(isPlayer _target) && {(_target getVariable [ARR_2(QQGVAR(Lying_State),false)]) && alive _target && !(_target getVariable [ARR_2('ACE_isUnconscious',false)]) && !(_target getVariable [ARR_2(QQEGVAR(evacuation,casualtyTicketClaimed),false)])});
+                    condition = QUOTE(!(isPlayer _target) && {(_target getVariable [ARR_2(QQGVAR(Lying_State),false)]) && alive _target && isNull (objectParent _target) && !(_target getVariable [ARR_2('ACE_isUnconscious',false)]) && !(_target getVariable [ARR_2(QQEGVAR(evacuation,casualtyTicketClaimed),false)])});
                     statement = QUOTE([_target] call FUNC(getUp));
                     exceptions[] = {"isNotInside"};
                     showDisabled = 0;
@@ -197,7 +197,7 @@ class CfgVehicles {
             class ACM_Action_GetUp {
                 displayName = CSTRING(LyingState_GetUp);
                 icon = "";
-                condition = QUOTE(_player getVariable [ARR_2(QQGVAR(Lying_State),false)]);
+                condition = QUOTE((_player getVariable [ARR_2(QQGVAR(Lying_State),false)]) && isNull (objectParent _player));
                 statement = QUOTE([_player] call FUNC(getUp));
                 exceptions[] = {"isNotInside","isNotInLyingState"};
                 showDisabled = 0;

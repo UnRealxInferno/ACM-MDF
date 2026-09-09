@@ -49,6 +49,8 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call ACEFUNC
 };
 
 // Fix anim when aborting carrying persons
+private _showGetUpPrompt = false;
+
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
 
     if (!(_target getVariable [QGVAR(Lying_State), false]) && IS_UNCONSCIOUS(_target)) then {
@@ -65,9 +67,8 @@ if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) 
         [QACEGVAR(common,switchMove), [_target, "AidlPpneMstpSnonWnonDnon_G01"]] call CBA_fnc_globalEvent;
     };
 
-    if (!(IS_UNCONSCIOUS(_target)) && _target getVariable [QGVAR(Lying_State), false]) then {
-        [QGVAR(getUpPrompt), [_target], _target] call CBA_fnc_targetEvent;
-    };
+    // Delayed until after the (possible) vehicle loading below, the prompt is pointless inside a vehicle
+    _showGetUpPrompt = !(IS_UNCONSCIOUS(_target)) && {_target getVariable [QGVAR(Lying_State), false]};
 };
 
 // Properly remove fake weapon
@@ -145,6 +146,10 @@ if (_loadCargo) then {
             _loadCargo = true;
         };
     };
+};
+
+if (_showGetUpPrompt && {isNull objectParent _target}) then {
+    [QGVAR(getUpPrompt), [_target], _target] call CBA_fnc_targetEvent;
 };
 
 // API

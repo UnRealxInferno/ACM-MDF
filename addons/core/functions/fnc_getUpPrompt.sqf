@@ -19,6 +19,8 @@ params ["_unit"];
 
 if (ACE_player != _unit) exitWith {};
 
+if !(isNull objectParent _unit) exitWith {}; // Can't get up while inside a vehicle
+
 [LLSTRING(LyingState_GetUp), "", ""] call ACEFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(GetUpActionID), [0xF0, [false, false, false], {
@@ -28,7 +30,7 @@ _unit setVariable [QGVAR(GetUpActionID), [0xF0, [false, false, false], {
 [{
     params ["_unit"];
 
-    !(_unit getVariable [QGVAR(Lying_State), false]) || IS_UNCONSCIOUS(_unit) || !(alive _unit) || (animationState _unit == "AinjPfalMstpSnonWnonDf_carried_dead");
+    !(_unit getVariable [QGVAR(Lying_State), false]) || IS_UNCONSCIOUS(_unit) || !(alive _unit) || !(isNull objectParent _unit) || (animationState _unit == "AinjPfalMstpSnonWnonDf_carried_dead");
 }, {
     params ["_unit"];
 
