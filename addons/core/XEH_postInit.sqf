@@ -138,6 +138,17 @@ if (GVAR(ignoreIncompatibleAddonWarning)) then {
 
 [QGVAR(getUpPrompt), LINKFUNC(getUpPrompt)] call CBA_fnc_addEventHandler;
 
+// Awake patients can't lie down inside a vehicle, clear the state so they aren't stuck with the get up prompt/interactions
+["CAManBase", "GetInMan", {
+    params ["_unit"];
+
+    if !(local _unit) exitWith {};
+    if (IS_UNCONSCIOUS(_unit)) exitWith {};
+    if !(_unit getVariable [QGVAR(Lying_State), false]) exitWith {};
+
+    _unit setVariable [QGVAR(Lying_State), false, true];
+}] call CBA_fnc_addClassEventHandler;
+
 ["isNotInLyingState", {!((_this select 0) getVariable [QGVAR(Lying_State), false])}] call ACEFUNC(common,addCanInteractWithCondition);
 
 if (hasInterface) then {

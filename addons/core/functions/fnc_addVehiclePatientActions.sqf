@@ -186,7 +186,7 @@ private _actions = [];
                     params ["", "", "_args"];
                     _args params ["_patient", "_medic"];
 
-                    true;
+                    !([_patient] call ACEFUNC(common,isAwake)); // Awake patients leave the vehicle on their own
                 },
                 {},
                 [_patient, _medic]
